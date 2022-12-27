@@ -1,7 +1,9 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
 }
 
 body {
@@ -10,17 +12,21 @@ body {
   align-items: center;
   background: linear-gradient(rgb(8, 8, 20), rgb(8, 13, 26));
   height: 100vh;
-  font-family: "Oswald", sans-serif;
 }
+
+/* Container */
 
 .container {
   position: relative;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   height: 90vh;
 }
+
+/* Cards & properties */
 
 .card {
   position: relative;
@@ -49,16 +55,20 @@ body {
 
 .card h2 {
   position: absolute;
-  font-size: 2rem;
-  color: rgb(255, 255, 255);
-  bottom: 30%;
-  left: 50%;
-  transform: translate(-50%, 0%) rotate(-90deg);
-  opacity: 100;
+  width: 100%;
+  font-size: 3rem;
+  opacity: 0;
   z-index: 5;
-  transition-duration: 0.5s;
+  color: rgb(255, 255, 255);
+  bottom: 50%;
+  left: 50%;
+  transform: translate(0%, 280%);
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.952);
+  transition-duration: .75s;
   transition-timing-function: jump-start;
 }
+
+/* Hover Transitions */
 
 .card:hover{
   border: 5px solid rgb(155, 215, 255);
@@ -66,26 +76,38 @@ body {
   0 0 40px rgba(118, 177, 255, 0.4),
   0 0 75px rgba(49, 139, 255, 0.3),
   0 0 150px rgba(12, 93, 199, 0.2);
-
 }
 
-.card img:hover{
+.card:hover > img {
   filter: blur(0);
 }
 
-.card h2:hover{
-  opacity: 0;
+/* Actived mode */
+
+.card.active{
+  flex: 2.5;
+  height: 75%;
 }
 
 .card.active img{
   filter: blur(0);
 }
 
-.card.active{
-  flex: 3;
+.card.active h2{
+  transform: translate(-40%, 280%);
+  opacity: 100;
 }
 
-@media (max-width: 600px) {
+/* Responsive with Media Queries */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 576px) {
   .container {
     flex-direction: column;
     width: 100vw;
