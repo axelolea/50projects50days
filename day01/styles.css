@@ -1,9 +1,93 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    display: grid;
-    
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(8, 8, 20), rgb(8, 13, 26));
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 90vh;
+}
+
+.card {
+  position: relative;
+  height: 50%;
+  flex: 0.5;
+  margin: 10px;
+  border-radius: 2rem 5rem;
+  border: 5px solid rgb(6, 28, 43);
+  box-shadow: 0 0 20px rgba(0, 0, 0 , 0.5);
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  transition-timing-function: jump-start;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(10px);
+  z-index: -5;
+  transition-duration: 0.5s;
+  transition-timing-function: jump-start;
+}
+
+.card h2 {
+  position: absolute;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%) rotate(-90deg);
+  opacity: 100;
+  z-index: 5;
+  transition-duration: 0.5s;
+  transition-timing-function: jump-start;
+}
+
+.card:hover{
+  border: 5px solid rgb(155, 215, 255);
+  box-shadow: 0 0 18px rgba(141, 190, 255, 0.6),
+  0 0 40px rgba(118, 177, 255, 0.4),
+  0 0 75px rgba(49, 139, 255, 0.3),
+  0 0 150px rgba(12, 93, 199, 0.2);
+
+}
+
+.card img:hover{
+  filter: blur(0);
+}
+
+.card h2:hover{
+  opacity: 0;
+}
+
+.card.active img{
+  filter: blur(0);
+}
+
+.card.active{
+  flex: 3;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    width: 100vw;
+  }
 }
