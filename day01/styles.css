@@ -4,19 +4,21 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgb(8, 8, 20), rgb(8, 13, 26));
-  height: 100vh;
+  background: linear-gradient(to left top, rgb(11, 19, 39), rgb(8, 8, 20));
 }
 
 /* Container */
 
 .container {
+  padding: 0 20px 20px;
   position: relative;
   max-width: 1200px;
   display: flex;
@@ -55,16 +57,16 @@ body {
 
 .card h2 {
   position: absolute;
-  width: 100%;
+  width: 150%;
   font-size: 3rem;
   opacity: 0;
   z-index: 5;
   color: rgb(255, 255, 255);
-  bottom: 50%;
-  left: 50%;
-  transform: translate(0%, 280%);
+  bottom: 2rem;
+  left: 2rem;
   text-shadow: 0 0 2rem rgba(0, 0, 0, 0.952);
-  transition-duration: .75s;
+  transition-duration: 0.25s;
+  transition-delay: 0s;
   transition-timing-function: jump-start;
 }
 
@@ -94,22 +96,30 @@ body {
 }
 
 .card.active h2{
-  transform: translate(-40%, 280%);
   opacity: 100;
+  transition-delay: 0.5s;
+  transition-duration: 0.5s;
 }
 
 /* Responsive with Media Queries */
 
 @media (max-width: 768px) {
   .container {
+    padding: 0;
     flex-direction: column;
     width: 100vw;
   }
-}
+  .card {
+    width: 70%;
+    flex: 0.5;
+  }
+  .card.active{
+    flex: 2.5;
+    width: 90%;
+  }
+  .card h2{
+    width: 80%;
+    font-size: 2.5rem;
+  }
 
-@media (max-width: 576px) {
-  .container {
-    flex-direction: column;
-    width: 100vw;
-  }
 }
