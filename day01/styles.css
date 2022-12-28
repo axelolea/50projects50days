@@ -5,6 +5,10 @@
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
   -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
 }
 
 body {
@@ -83,7 +87,7 @@ body {
 /* Hover Transitions */
 
 .card:hover{
-  border: 5px solid rgb(155, 215, 255);
+  border-color: rgb(155, 215, 255);
   box-shadow: 0 0 18px rgba(141, 190, 255, 0.6),
   0 0 40px rgba(118, 177, 255, 0.4),
   0 0 75px rgba(49, 139, 255, 0.3),
