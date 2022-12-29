@@ -2,11 +2,16 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Unbounded", cursive;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
 }
 
 body {
   background: linear-gradient(to top left, #17001a, #20052c, #17001a);
-  font-family: "Unbounded", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +97,7 @@ body {
   width: 3rem;
   transform: translate(-50%, -50%);
   transition: 0.3s ease;
-  transition-delay: 0.5s;
+  transition-delay: 0.4s;
 }
 
 #circle-1 {
