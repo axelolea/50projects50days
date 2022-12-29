@@ -3,6 +3,8 @@ const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const circles = document.querySelectorAll('.circle');
 
+const lengthTriangule = 912
+
 var currentActivite = 1;
 
 next.addEventListener('click', () => {
@@ -28,8 +30,18 @@ const update = () => {
         }
     })
 
-    var activeCirclesPorcent = document.querySelectorAll('.active')
-    progress.style.width = ((activeCirclesPorcent.length - 1) / (circles.length - 1)) * 100 + '%';
+    if ( currentActivite === 1 ){
+        progress.style.strokeDashoffset = lengthTriangule;
+    }
+    else if ( currentActivite === 2 ){
+        progress.style.strokeDashoffset = lengthTriangule * 0.66;
+    }
+    else if ( currentActivite === 3 ){
+        progress.style.strokeDashoffset = lengthTriangule * 0.33;
+    }
+    else {
+        progress.style.strokeDashoffset = 0;
+    }
 
     if( currentActivite === 1){
         prev.disabled = true

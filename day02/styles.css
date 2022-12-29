@@ -1,101 +1,159 @@
-:root{
-    --star-color: #fffab8;
-}
-
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background: linear-gradient(to top left,#08001a,#0a0022, #08001a);
-    font-family: 'Unbounded', cursive;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height: 100vh;
+  background: linear-gradient(to top left, #17001a, #20052c, #17001a);
+  font-family: "Unbounded", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 .progress-container {
-    position: relative;
-    display: flex;
-    max-width: 100%;
-    width: 400px;
-    margin-bottom: 50px;
-    justify-content: space-between;
+  position: relative;
+  display: flex;
+  width: 80vw;
+  height: 200px;
+  max-width: 1000px;
+  margin-bottom: 50px;
+  justify-content: space-between;
 }
 
-/* .progress-container::before{
-    content: '';
-    background-color: #dbdbdb;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 0.5rem;
-    width: 100%;
-    transform: translateY(-50%);
-    z-index: -5;
-} */
-
-.progress{
-    position: absolute;
-    background-color: #a0d9ff;
-    top: 50%;
-    left: 0;
-    height: 0.5rem;
-    width: 0%;
-    transform: translateY(-50%);
-    z-index: -5;
-    transition: 0.5s ease-out;
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
 }
 
+.stroke {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 0.5rem;
+  stroke-linecap: round;
+  stroke-dasharray: 912 1000;
+  stroke-dashoffset: 0;
+  transition: 0.5s ease-out;
+}
+
+#progress {
+  z-index: -7;
+  stroke: white;
+  stroke-dashoffset: 912;
+  filter: drop-shadow(0 0 12px rgba(255, 163, 255, 0.8));
+}
 
 .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    height: 2rem;
-    width: 2rem;
-    border: 0.2rem solid #dbdbdb;
-    border-radius: 50%;
-    z-index: 5;
-    transition: 0.75 ease-out;
-    transition-delay: 0s;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #311936;
+  color: #443057;
+  border: 0.2rem solid #1f1029;
+  box-shadow: 0 0 20px #00000080;
+  font-size: 1rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  z-index: 5;
+  transition: 0.2s ease-out;
+  transition-delay: 0s;
 }
 
 .circle.active {
-    border-color: #687f8f;
-    transition: 0.75 ease-out;
-    transition-delay: 0.5s;
+  background-color: #f7cdff;
+  font-size: 1.5rem;
+  color: #9779b4;
+  border-color: #c266ff;
+  box-shadow: 0 0 15px rgba(229, 125, 255, 0.8),
+    0 0 30px rgba(229, 125, 255, 0.6), 0 0 60px rgba(229, 125, 255, 0.4),
+    0 0 80px rgba(229, 125, 255, 0.1);
+  height: 3rem;
+  width: 3rem;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+  transition-delay: 0.5s;
+}
+
+#circle-1 {
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+#circle-2 {
+  top: 25%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+#circle-3 {
+  top: 75%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+#circle-4 {
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
 }
 
 .btn {
-    font-family: 'Unbounded', cursive;
-    font-size: 1rem;
-    padding: .5rem 1.75rem;
-    background-color: #51baff;
-    color: white;
-    border: 0;
-    border-radius: 0.5rem;
-    cursor: pointer;
+  font-family: "Unbounded", cursive;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  margin: 2rem;
+  background-color: #e9b1ff;
+  color: rgb(89, 43, 110);
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.1s ease-out;
 }
 
-.btn:active{
-    transform: scale(0.92);
+.btn:active {
+  transition: 0.1s ease-in;
+  transform: scale(1.2);
 }
 
-.btn:disabled{
-    background-color: #bbe4ff;
-    cursor: not-allowed;
+.btn:hover {
+  transition-duration: 0.1s;
+  background-color: #f7e1ff;
+  color: rgb(150, 81, 182);
+  box-shadow: 0 0 20px #dc84ffcc, 0 0 50px rgba(221, 136, 255, 0.5),
+    0 0 100px rgba(231, 169, 255, 0.2);
 }
 
-.btn:focus{
-    outline: 0;
+button[disabled="disabled"],
+.btn:disabled {
+  background-color: #441855;
+  box-shadow: none;
+  color: rgb(89, 43, 110);
+  cursor: not-allowed;
+}
+
+.btn:focus {
+  outline: 0;
 }
