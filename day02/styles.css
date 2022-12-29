@@ -1,0 +1,101 @@
+:root{
+    --star-color: #fffab8;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to top left,#08001a,#0a0022, #08001a);
+    font-family: 'Unbounded', cursive;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    width: 400px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+/* .progress-container::before{
+    content: '';
+    background-color: #dbdbdb;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 0.5rem;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: -5;
+} */
+
+.progress{
+    position: absolute;
+    background-color: #a0d9ff;
+    top: 50%;
+    left: 0;
+    height: 0.5rem;
+    width: 0%;
+    transform: translateY(-50%);
+    z-index: -5;
+    transition: 0.5s ease-out;
+}
+
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    border: 0.2rem solid #dbdbdb;
+    border-radius: 50%;
+    z-index: 5;
+    transition: 0.75 ease-out;
+    transition-delay: 0s;
+}
+
+.circle.active {
+    border-color: #687f8f;
+    transition: 0.75 ease-out;
+    transition-delay: 0.5s;
+}
+
+.btn {
+    font-family: 'Unbounded', cursive;
+    font-size: 1rem;
+    padding: .5rem 1.75rem;
+    background-color: #51baff;
+    color: white;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.92);
+}
+
+.btn:disabled{
+    background-color: #bbe4ff;
+    cursor: not-allowed;
+}
+
+.btn:focus{
+    outline: 0;
+}
