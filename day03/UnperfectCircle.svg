@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="UnperfectCircle.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#808080;stroke-width:1.60788"
+       d="M 6.0889305,56.144366 C 3.942091,44.819831 4.6035162,31.004084 11.410254,21.956079 20.058782,10.459836 36.092419,5.909652 49.989853,5.124922 c 17.304998,-0.9771391 36.56607,3.7420483 49.887421,15.428561 8.498786,7.455798 13.643036,17.159468 14.966206,31.20777 1.36227,14.463358 -6.3056,33.373401 -17.626877,43.831133 C 82.165741,109.49523 57.987294,120.09622 39.347205,112.42355 19.818531,104.38511 10.197825,77.8187 6.0889305,56.144366 Z"
+       id="path63"
+       sodipodi:nodetypes="ssssssss" />
+  </g>
+</svg>
