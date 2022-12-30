@@ -10,11 +10,30 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Prosto+One&family=Roboto+Mono&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
     <div class="btn-container">
-      <div class="circle">
+      <div class="bg-circles">
+        <svg
+          class="unperfect-circles"
+          width="100%"
+          height="100%"
+          viewBox="0 0 120 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            class="circle-front"
+            d="M 14.832673,56.948373 C 13.034025,47.985318 13.588175,37.050537 19.29094,29.889292 26.536778,20.790335 39.969948,17.188991 51.613381,16.567899 66.111712,15.79452 82.248864,19.529626 93.409649,28.779177 100.53003,34.680234 104.83994,42.360419 105.94851,53.47926 107.08984,64.926607 100.66561,79.893381 91.180507,88.170386 78.570718,99.174101 58.313731,107.56449 42.696846,101.49178 26.335493,95.129583 18.275153,74.103006 14.832673,56.948373 Z"
+          />
+          <path
+            class="circle-back"
+            d="M 14.832673,56.948373 C 13.034025,47.985318 13.588175,37.050537 19.29094,29.889292 26.536778,20.790335 39.969948,17.188991 51.613381,16.567899 66.111712,15.79452 82.248864,19.529626 93.409649,28.779177 100.53003,34.680234 104.83994,42.360419 105.94851,53.47926 107.08984,64.926607 100.66561,79.893381 91.180507,88.170386 78.570718,99.174101 58.313731,107.56449 42.696846,101.49178 26.335493,95.129583 18.275153,74.103006 14.832673,56.948373 Z"
+          />
+        </svg>
+      </div>
+      <div class="btn">
         <button
           id="button"
           class="button-anim"
@@ -56,11 +75,11 @@
       </div>
     </div>
     <div class="container" id="container">
-      <img src="../assets/isotype-white.svg" alt="isotype" class="isotype" />
+      <img src="../assets/isotype.svg" alt="isotype" class="isotype" />
       <main class="main-content">
         <section>
           <h1>About cats</h1>
-          <small>Axel Olea</small>
+          <h2>Axel Olea</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
             harum doloribus magnam modi tempora illo aperiam vitae nemo
@@ -95,8 +114,8 @@
           <!-- Source: https://www.euronews.com/green/2022/07/27/cats-are-alien-species-says-polish-institute -->
         </section>
         <section>
-          <h2>More cats</h2>
-          <small>Axel Olea</small>
+          <h1>More cats</h1>
+          <h2>Axel Olea</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
             ipsam voluptatibus sunt similique nisi in enim. Odio temporibus
@@ -119,25 +138,14 @@
           <!-- Source: https://www.nytimes.com/2022/11/17/learning/cats.html -->
         </section>
       </main>
-      <nav>
-        <ul>
-          <li class="fas fa-home">Home</li>
-          <li class="fas fa-home">About</li>
-          <li class="fas fa-home">Contact</li>
-          <li class="fas fa-home">Home</li>
-        </ul>
-      </nav>
-
-      <div class="bg-circles">
-        <svg class="unperfect-circles" width="100%" height="100%" viewBox="0 0 110 110" preserveAspectRatio="none">
-          <g>
-            <path
-              d="M 6.0889305,56.144366 C 3.942091,44.819831 4.6035162,31.004084 11.410254,21.956079 20.058782,10.459836 36.092419,5.909652 49.989853,5.124922 c 17.304998,-0.9771391 36.56607,3.7420483 49.887421,15.428561 8.498786,7.455798 13.643036,17.159468 14.966206,31.20777 1.36227,14.463358 -6.3056,33.373401 -17.626877,43.831133 C 82.165741,109.49523 57.987294,120.09622 39.347205,112.42355 19.818531,104.38511 10.197825,77.8187 6.0889305,56.144366 Z"
-            />
-          </g>
-        </svg>
-      </div>
     </div>
+    <nav>
+      <ul>
+        <li class="list-item"><i class="fas fa-home"></i><a href="#">Home</a></li>
+        <li class="list-item"><i class="fas fa-user"></i><a href="#">About</a></li>
+        <li class="list-item"><i class="fas fa-contact"></i><a href="#">Contact</a></li>
+      </ul>
+    </nav>
     <script src="./main.js"></script>
   </body>
 </html>
