@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -57,7 +58,8 @@ body {
   top: 0;
   left: 0;
   font-size: 1.25rem;
-  background-color: rgb(216, 158, 255);
+  color: rgb(232, 198, 255);
+  background-color: rgb(213, 150, 255);
   border-radius: 50%;
   cursor: pointer;
 }
