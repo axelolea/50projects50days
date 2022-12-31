@@ -23,11 +23,11 @@ function cardStructure(project) {
     <div class="card-body">
       <span class="card-title">${project["name"]}</span>
       <div class="buttons">
-        <a href="${project["link-demo"]}" class="btn btn-primary" target="_blank">
+        <a href="${project["link-demo"]}" class="btn btn-primary">
           Demo
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
-        <a href="${project["link-repo"]}" class="btn btn-secondary" target="_blank">
+        <a href="${project["link-repo"]}" class="btn btn-secondary">
           Code
           <i class="bi bi-code"></i>
         </a>

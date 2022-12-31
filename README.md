@@ -5,9 +5,9 @@ Hace ya varios dias mientras usaba la red social LinkedIn, varias personas de mi
 
 Aqui estaran todos los projectos que ire realizando en este repositorio.
 
-[Original Repository 50Days50](https://github.com/bradtraversy/50projects50days)
+[Original Repository 50projects50days](https://github.com/bradtraversy/50projects50days)
 
-[My 50ProjectsIn50Days Website](https://axelolea.github.io/50projects-in-50days/main/)
+[My 50projects50days Website](https://axelolea.github.io/50projects-in-50days/main/)
 
 | Day | Name Project | Demo |
 | - | - | - |
