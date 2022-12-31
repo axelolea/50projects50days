@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
   height: 100vh;
 }
@@ -49,5 +50,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4rem;
+  text-shadow:  0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 30px rgba(255, 255, 255, 0.2);
   color: white;
+}
+
+.loading-svg {
+  fill: none;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5),
+                      0 0 30px rgba(255, 255, 255, 0.2));
+  stroke: white;
+  stroke-width: 10px;
+  stroke-dasharray: 220 220;
+  stroke-dashoffset: 220;
+  transform: rotate(135deg);
+  transition: 50ms ease-in-out;
 }

@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/isotype-gray.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
-    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Blurry Loading</title>
 </head>
 <body>
     <img src="../assets/isotype-white.svg" alt="isotype" class="isotype">
     <img class="bg" src="https://i.pinimg.com/originals/ee/76/3a/ee763a2b32f669b26407982d1bc02ef8.jpg" alt="Dr. Stone Background">
     <div class="loading-container">
-        <svg class="loading-svg" id="loading">
-
+        <svg viewBox="0 0 100 100" class="loading-svg" id="loading" preserveAspectRatio="none">
+            <circle cx="50" cy="50" r="35"></circle>
         </svg>
         <h1 class="loading-text">0%</h1>
     </div>
