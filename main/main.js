@@ -27,7 +27,7 @@ function cardStructure(project) {
           Demo
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
-        <a href="${project["link-repo"]}" class="btn btn-secondary" target="_blank>
+        <a href="${project["link-repo"]}" class="btn btn-secondary" target="_blank">
           Code
           <i class="bi bi-code"></i>
         </a>
