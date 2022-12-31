@@ -8,9 +8,25 @@ btn.addEventListener("click", () => {
     btn.setAttribute("closed", "true");
     content.classList.add('show-nav')
     items.forEach((item) => item.classList.add('active'));
+    disableScroll()
   } else {
     btn.setAttribute("closed", "false");
     content.classList.remove('show-nav');
     items.forEach((item) => item.classList.remove('active'));
+    enableScroll()
   }
 });
+
+function disableScroll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+      // if any scroll is attempted, set this to the previous value
+      window.onscroll = function() {
+          window.scrollTo(scrollLeft, scrollTop);
+      };
+}
+
+function enableScroll() {
+  window.onscroll = function() {};
+}
