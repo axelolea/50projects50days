@@ -19,7 +19,7 @@ function cardStructure(project) {
   const card = `
   <div>
     <span class="title-day">Day ${project["number"]}</span>
-    <img src="./src/img/${project["photo"]}" alt="Day ${project["number"]}" />
+    <img src="${project["photo"]}" alt="Day ${project["number"]}" />
     <div class="card-body">
       <span class="card-title">${project["name"]}</span>
       <div class="buttons">

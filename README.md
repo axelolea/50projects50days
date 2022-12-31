@@ -11,7 +11,7 @@ Aqui estaran todos los projectos que ire realizando en este repositorio.
 
 | Day | Name Project | Demo |
 | - | - | - |
-| 01 | [Expanding Cards](https://github.com/axelolea/50projects-in-50days/tree/main/day01) | [Demo]() |
-| 02 | [Progress Steps](https://github.com/axelolea/50projects-in-50days/tree/main/day02) | [Demo]() |
-| 03 | [Rotating Navigation Animation](https://github.com/axelolea/50projects-in-50days/tree/main/day03) | [Demo]() |
-| 04 | [Hidden Search Widget](https://github.com/axelolea/50projects-in-50days/tree/main/day04) | [Demo]() |
+| 01 | [Expanding Cards](https://github.com/axelolea/50projects-in-50days/tree/main/day01) | [Demo](https://axelolea.github.io/50projects-in-50days/day01/) |
+| 02 | [Progress Steps](https://github.com/axelolea/50projects-in-50days/tree/main/day02) | [Demo](https://axelolea.github.io/50projects-in-50days/day02/) |
+| 03 | [Rotating Navigation Animation](https://github.com/axelolea/50projects-in-50days/tree/main/day03) | [Demo](https://axelolea.github.io/50projects-in-50days/day03/) |
+| 04 | [Hidden Search Widget](https://github.com/axelolea/50projects-in-50days/tree/main/day04) | [Demo](https://axelolea.github.io/50projects-in-50days/day04/) |

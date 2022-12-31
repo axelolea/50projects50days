@@ -1,0 +1,39 @@
+{
+    "projects": [
+            {
+                "name": "Expanding Cards",
+                "number": 1,
+                "link-demo": "https://axelolea.github.io/50projects-in-50days/day01/",
+                "link-repo": "https://github.com/axelolea/50projects-in-50days/tree/main/day01",
+                "photo": "https://i.imgur.com/ghzI7lC.png"
+            },
+            {
+                "name": "Progress Steps",
+                "number": 2,
+                "link-demo": "https://axelolea.github.io/50projects-in-50days/day02/",
+                "link-repo": "https://github.com/axelolea/50projects-in-50days/tree/main/day02",
+                "photo": "https://i.imgur.com/BocM70T.png"
+            },
+            {
+                "name": "Rotating Navigation Animation",
+                "number": 3,
+                "link-demo": "https://axelolea.github.io/50projects-in-50days/day03/",
+                "link-repo": "https://github.com/axelolea/50projects-in-50days/tree/main/day03",
+                "photo": "https://i.imgur.com/uZa0XzF.png"
+            },
+            {
+                "name": "Hidden Search Widgets",
+                "number": 4,
+                "link-demo": "https://axelolea.github.io/50projects-in-50days/day04/",
+                "link-repo": "https://github.com/axelolea/50projects-in-50days/tree/main/day04/",
+                "photo": "https://i.imgur.com/fvnDLuR.png"
+            },
+            {
+                "name": "Blurry Loading",
+                "number": 5,
+                "link-demo": "http://",
+                "link-repo": "http://",
+                "photo": "day-5.png"
+            }
+        ]
+}
