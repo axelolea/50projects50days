@@ -7,13 +7,13 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
   height: 100vh;
 }
@@ -30,8 +30,9 @@ body {
 .bg{
   position: absolute;
   width: 100vw;
-  top: 0;
-  left: 0;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
   z-index: 0;
   transform-origin: center;
   transform: scale(1.5);
