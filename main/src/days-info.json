@@ -34,6 +34,13 @@
                 "link-demo": "https://axelolea.github.io/50projects50days/day05/",
                 "link-repo": "https://github.com/axelolea/50projects50days/tree/main/day05/",
                 "photo": "https://live.staticflickr.com/65535/52599236325_d2f72a07f0_h.jpg"
+            },
+            {
+                "name": "Scroll Animation",
+                "number": 6,
+                "link-demo": "https://axelolea.github.io/50projects50days/day06/",
+                "link-repo": "https://github.com/axelolea/50projects50days/tree/main/day06/",
+                "photo": "https://live.staticflickr.com/65535/52601263658_f11fc07c04_h.jpg"
             }
         ]
 }
