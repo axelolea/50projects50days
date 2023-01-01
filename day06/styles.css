@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  --deg-rotate: 45deg;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  overflow-x: hidden;
+  background: linear-gradient(to top right, #010f20, #02142b, #010f20);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+h1 {
+  padding-top: 30px;
+  color: white;
+  font-size: 4rem;
+  text-shadow:  0 0 10px rgba(255, 255, 255, 0.6),
+                0 0 30px rgba(128, 183, 255, 0.4),
+                0 0 80px rgba(39, 130, 233, 0.2);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.content-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 250px;
+  opacity: 0;
+  transform: translateX(200%);
+  transition: 250ms ease-out;
+}
+
+.content-box:nth-of-type(even){
+  transform: translateX(-200%);
+}
+
+.content-box.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.text-content{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent;
+  border-image: linear-gradient(var(--deg-rotate), #ffd800, #ff5520, #750cf2, #0cbcf2);
+  border-image-slice: 1;
+  background-color: #020913;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.content-box::before, .content-box::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -10;
+  transition: opacity 200ms ease-out;
+  background:linear-gradient(var(--deg-rotate), #ffd800, #ff5520, #750cf2, #0cbcf2);;
+}
+
+
+.content-box::before {
+  filter: blur(80px);
+}
+
+.content-box::after {
+  filter: blur(20px)
+}
+
+.content-box:hover::before{
+  opacity: 0.6;
+}
+
+.content-box:hover::after{
+  opacity: 1;
+}
+
+.text-content:hover{
+  background: linear-gradient(rgb(0, 2, 10), rgb(24, 24, 46));
+}
