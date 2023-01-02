@@ -3,44 +3,46 @@
             {
                 "name": "Expanding Cards",
                 "number": 1,
-                "link-demo": "https://axelolea.github.io/50projects50days/day01/",
-                "link-repo": "https://github.com/axelolea/50projects50days/tree/main/day01",
+                "folder-name": "day01/",
                 "photo": "https://farm66.staticflickr.com/65535/52598586298_635e990841_b.jpg"
             },
             {
                 "name": "Progress Steps",
                 "number": 2,
-                "link-demo": "https://axelolea.github.io/50projects50days/day02/",
-                "link-repo": "https://github.com/axelolea/50projects50days/tree/main/day02",
+                "folder-name": "day02/",
                 "photo": "https://farm66.staticflickr.com/65535/52598495030_22ef905803_b.jpg"
             },
             {
                 "name": "Rotating Navigation Animation",
                 "number": 3,
-                "link-demo": "https://axelolea.github.io/50projects50days/day03/",
-                "link-repo": "https://github.com/axelolea/50projects50days/tree/main/day03",
+                "folder-name": "day03/",
                 "photo": "https://farm66.staticflickr.com/65535/52597575727_0a4cf31344_b.jpg"
             },
             {
                 "name": "Hidden Search Widgets",
                 "number": 4,
-                "link-demo": "https://axelolea.github.io/50projects50days/day04/",
-                "link-repo": "https://github.com/axelolea/50projects50days/tree/main/day04/",
+                "folder-name": "day04/",
                 "photo": "https://farm66.staticflickr.com/65535/52598328944_b7c20dbc1c_b.jpg"
             },
             {
                 "name": "Blurry Loading",
                 "number": 5,
-                "link-demo": "https://axelolea.github.io/50projects50days/day05/",
-                "link-repo": "https://github.com/axelolea/50projects50days/tree/main/day05/",
+                "folder-name": "day05/",
                 "photo": "https://live.staticflickr.com/65535/52599236325_d2f72a07f0_h.jpg"
             },
             {
                 "name": "Scroll Animation",
                 "number": 6,
-                "link-demo": "https://axelolea.github.io/50projects50days/day06/",
-                "link-repo": "https://github.com/axelolea/50projects50days/tree/main/day06/",
+                "folder-name": "day06/",
                 "photo": "https://live.staticflickr.com/65535/52601263658_f11fc07c04_h.jpg"
+            },
+            {
+                "name": "Split Landing Page",
+                "number": 7,
+                "folder-name": "day07/",
+                "photo": "https://live.staticflickr.com/65535/52602100054_eae073d87b_h.jpg"
             }
-        ]
+        ],
+    "general-demo-link" : "https://axelolea.github.io/50projects50days/",
+    "general-repo-link" : "https://github.com/axelolea/50projects50days/tree/main/"
 }

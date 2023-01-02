@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  --left-color-background: #bb5555;
+  --right-color-background: #62abbd;
+  --left-color-dark-background: #300a0a;
+  --right-color-dark-background: #072229;
+  --hover-width: 70%;
+  --other-width: 30%;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+  filter: drop-shadow(0 0 20px rgb(#fff));
+}
+
+/* Container Propertiers */
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Split Propertiers */
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.split.left{
+  left: 0;
+}
+
+.split.right{
+  right: 0;
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all 300ms ease-out;
+}
+
+.split.right::before, .split.left::before {
+  opacity: 0.25
+}
+
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-color-background);
+}
+
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-color-background);
+}
+
+/* Front Card Propertiers */
+
+.card {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+  z-index: 10;
+  transition: all 1.5s cubic-bezier(0,1.05,.11,.95);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 130%;
+  background-color: #fff;
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 1;
+  transform: translate(-50%, -50%) skewX(15deg);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 130%;
+  background-color: #fff;
+  border-radius: 15px;
+  z-index: -2;
+  opacity: 1;
+  transform: translate(-50%, -50%) skewX(15deg);
+  filter: blur(30px);
+}
+
+.left .card::after, .left .card::before{
+  background: linear-gradient(15deg, rgb(168, 238, 255), rgb(55, 165, 255), rgb(22, 150, 255));
+}
+
+.right .card::after, .right .card::before{
+  background: linear-gradient(15deg, rgb(255, 227, 168), rgb(255, 168, 55), rgb(255, 88, 22));
+}
+
+.card::before, .card::after {
+  transition: all 1.5s cubic-bezier(0,1.05,.11,.95);
+}
+
+.isotype-split {
+  position: relative;
+  max-height: 100px;
+  object-fit: cover;
+  filter: invert(100%)
+          saturate(0%)
+          contrast(150%);
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 1rem 3.5rem;
+  color: #ccc;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 300ms ease-out;
+}
+
+.btn:hover {
+  color: #999;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+}
+
+.img-background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1.2);
+  filter: blur(20px);
+  z-index: -10;
+  object-fit: cover;
+  object-position: center;
+  transition: 300ms ease-out;
+}
+
+/* Hover changes */
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+/* Change color hover */
+
+.hover-left .split.right::before {
+  background-color: var(--left-color-dark-background);
+  opacity: 0.5;
+}
+
+.hover-left .split.left::before {
+  opacity: 0.1;
+}
+
+.hover-right .split.right::before {
+  opacity: 0.1; 
+}
+
+.hover-right .split.left::before {
+  background-color: var(--right-color-dark-background);
+  opacity: 0.5;
+}
+
+/* Change Blur Hover */
+
+.hover-left .left .img-background {
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+.hover-right .right .img-background {
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+/* Move transition card hover */
+.hover-right .left .card, .hover-left .right .card{
+  transition: all 300ms cubic-bezier(0,1.05,.11,.95);
+}
+.hover-right .left .card{
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.hover-left .right .card{
+  opacity: 0;
+  transform: translateX(50%);
+}
+
+/* Shadow Isotype Hover */
+
+.hover-left .left .card .isotype-split {
+  filter: invert(100%)
+          saturate(0%)
+          contrast(150%) 
+          drop-shadow(0 0 10px rgba(255, 225, 255, 0.6))
+          drop-shadow(0 0 50px rgba(255, 225, 255, 0.4));
+}
+
+.hover-right .right .card .isotype-split {
+  filter: invert(100%)
+          saturate(0%)
+          contrast(150%) 
+          drop-shadow(0 0 10px rgba(255, 225, 255, 0.6))
+          drop-shadow(0 0 50px rgba(255, 225, 255, 0.4));
+}
+
+/* Card BackFill */
+
+.hover-left .left .card::after, .hover-left .left .card::before{
+  width: 100%;
+  transform: translate(-50%, -50%) skewX(0deg)
+}
+
+.hover-right .right .card::after, .hover-right .right .card::before{
+  width: 100%;
+  transform: translate(-50%, -50%) skewX(0deg)
+}

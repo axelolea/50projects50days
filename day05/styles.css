@@ -40,6 +40,9 @@ body {
 }
 
 .loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   height: 400px;
   z-index: 2;
@@ -66,4 +69,15 @@ body {
   stroke-dashoffset: 220;
   transform: rotate(135deg);
   transition: 50ms ease-in-out;
+}
+
+@media(maxWidth: 700px) {
+  .loading-container {
+    width: 200px;
+    height: 200px;
+  }
+  .loading-text {
+    font-size: 1rem;
+  }
+
 }

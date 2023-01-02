@@ -17,3 +17,4 @@ Aqui estaran todos los projectos que ire realizando en este repositorio.
 | 04 | [Hidden Search Widget](https://github.com/axelolea/50projects50days/tree/main/day04) | [Demo](https://axelolea.github.io/50projects50days/day04/) |
 | 05 | [Blurry Loading](https://github.com/axelolea/50projects50days/tree/main/day05) | [Demo](https://axelolea.github.io/50projects50days/day05/) |
 | 06 | [Scroll Animation](https://github.com/axelolea/50projects50days/tree/main/day06) | [Demo](https://axelolea.github.io/50projects50days/day06/) |
+| 07 | [Split Landing Page](https://github.com/axelolea/50projects50days/tree/main/day07) | [Demo](https://axelolea.github.io/50projects50days/day07/) |
