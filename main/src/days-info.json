@@ -43,6 +43,8 @@
                 "photo": "https://live.staticflickr.com/65535/52602100054_eae073d87b_h.jpg"
             }
         ],
-    "general-demo-link" : "https://axelolea.github.io/50projects50days/",
-    "general-repo-link" : "https://github.com/axelolea/50projects50days/tree/main/"
+    "links": {
+        "general-demo-link" : "https://axelolea.github.io/50projects50days/",
+        "general-repo-link" : "https://github.com/axelolea/50projects50days/tree/main/"
+    }
 }
