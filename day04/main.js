@@ -5,7 +5,6 @@ const data = fetch("../main/src/days-info.json")
       return response.json();
     })
     .then((data) => {
-    console.log(data);
     isotypeLink.setAttribute('href', data['links']['main-link'])
   });
 
