@@ -132,7 +132,7 @@ form {
   display: inline-block;
   font-size: 1.2rem;
   min-width: 5px;
-  transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 300ms cubic-bezier(.73,.11,0,1.54);
 }
 
 .input-container input:focus + label span,
