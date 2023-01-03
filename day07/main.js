@@ -1,3 +1,16 @@
+// Get link to Isotype
+const isotypeLink = document.getElementById('isotype-link');
+const data = fetch("../main/src/days-info.json")
+  .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+    console.log(data);
+    isotypeLink.setAttribute('href', data['links']['main-link'])
+  });
+
+// Main Code Day
+
 const container = document.querySelector('.container')
 
 const leftRange = window.innerWidth * 0.45
