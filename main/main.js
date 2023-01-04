@@ -18,9 +18,7 @@ async function createCardsProjects(data) {
 }
 
 function cardStructure(project, links) {
-  const card = document.createElement("div");
-  // card.innerHTML =
-  const card1 = `
+  const card = `
   <div>
     <span class="title-day">Day ${project["number"]}</span>
     <img src="${project["photo"]}" alt="Day ${project["number"]}" />
@@ -43,5 +41,5 @@ function cardStructure(project, links) {
     </div>
   </div>
   `;
-  return card1;
+  return card;
 }
