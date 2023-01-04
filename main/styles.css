@@ -1,8 +1,9 @@
 :root{
-  --primary-color: rgb(91, 98, 163);
-  --primary-dark-color: #465470;
+  --primary-color: #5b62a3;
+  --primary-dark-color: #475571;
   --secondary-color: #829fdd;
   --bg-color: #323949;
+  --navbar-color: #6f81a3;
 }
 
 * {
@@ -15,6 +16,11 @@
   -ms-user-select: none;
   user-select: none;
   font-family: 'Zen Dots', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 a {
@@ -37,7 +43,7 @@ body {
 /* Navbar */
 
 nav {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +51,9 @@ nav {
   left: 0;
   height: 70px;
   width: 100vw;
-  background-color: var(--primary-dark-color);
+  z-index: 30;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  background-color: var(--navbar-color);
 }
 
 nav .container {
@@ -82,7 +90,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 70px);
+  height: 100vh;
   overflow: hidden;
   flex-direction: column;
 }
