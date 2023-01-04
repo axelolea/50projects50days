@@ -6,10 +6,12 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  font-family: 'Andika', sans-serif;
   --btn-size : 80px;
   --gap-size: 10px;
   --border-size: 2px;
   --color-border: rgb(139, 139, 139);
+  --color-border-dark: rgb(71, 71, 71);
   --launcher-color: rgb(34, 34, 34);
   user-select: none;
 }
@@ -37,8 +39,18 @@ body {
   padding: 20px;
   background-color: var(--launcher-color);
   border-radius: 40px;
+  border: 3px solid var(--color-border-dark);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  font-size: 2.5rem;
+  transform: translate(-50%);
+  color: rgb(150, 150, 150)
+}
 
 .launchpad-grid {
   position: relative;
@@ -50,14 +62,20 @@ body {
 
 .light-btn {
   position: relative;
+  display: flex;
+  cursor: pointer;
   width: var(--btn-size);
   height: var(--btn-size);
+  justify-content: center;
+  align-items: center;
   background: radial-gradient(rgb(83, 83, 83), rgb(49, 49, 49));
   border-radius: calc(var(--btn-size) * 0.1);
   border: var(--border-size) solid var(--color-border);
   z-index: 10;
+  transition: all 100ms ease-out;
 }
 
+.light-btn:active,
 .light-btn.active{
   z-index: 15;
   color: hsl(208, 100%, 97%);
@@ -66,4 +84,20 @@ body {
   box-shadow: 0 0 15px hsla(var(--c), 100%, 84%, 0.7),
               0 0 50px hsla(var(--c), 100%, 69%, 0.5),
               0 0 50px hsla(var(--c), 100%, 53%, 0.3);
+}
+
+.launchpad-grid[ viewKeys="true" ] .light-btn p {
+  font-size: 2.5rem;
+  color: rgb(114, 114, 114);
+  opacity: 0.3;
+}
+
+.launchpad-grid[viewKeys="false"] .light-btn p {
+  opacity: 0;
+
+}
+
+.launchpad-grid[ viewKeys="true" ] .light-btn:active > p,
+.launchpad-grid[ viewKeys="true" ] .light-btn.active > p {
+  opacity: 0;
 }

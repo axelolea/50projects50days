@@ -12,6 +12,8 @@ const purple = '308'
 //                             green,    green,    green,    green,
 //                             purple,   purple,   purple,   purple]
 
+const buttons = 4 * 4 //Number of buttons (Col * Row)
+
 const launchpadColors = [   red,      blue,      green,     purple,
                             purple,   red,       blue,      green,
                             green,    purple,    red,       blue,
@@ -21,17 +23,72 @@ const launchpadKeys = [ '1', '2', '3', '4',
                         'q', 'w', 'e', 'r',
                         'a', 's', 'd', 'f',
                         'z', 'x', 'c', 'v']
+const sounds = []
 
+const containerSounds = document.getElementById('container-sounds')
 const launchpadGrid = document.getElementById('launchpad-grid')
 
-const createBtn = (color) => {
-    const btn = document.createElement("div");
-    btn.classList.add('light-btn')
+
+// Create Sounds in SoundsContianer
+
+const createSound = (key) => {
+    const sound = document.createElement("audio");
+    sound.setAttribute('id', `sound-${key}`)
+    sound.setAttribute('src', `./sounds/${key}.mp3`)
+    containerSounds.appendChild(sound)
+}
+
+// Actived Sound Function
+
+const activeSound = (key) => {
+    document.getElementById(`sound-${key}`).play()
+}
+
+const stopSound = (key) => {
+    const sound = document.getElementById(`sound-${key}`)
+    sound.pause()
+    sound.currentTime = 0;
+}
+
+// Create Button
+
+const createBtn = (color, key) => {
+    const btn = document.createElement("button");
+    const keyElement = document.createElement("p");
+    createSound(key)
+    keyElement.innerText = key.toUpperCase();
+    btn.appendChild(keyElement);
+    btn.classList.add('light-btn');
+    btn.onmousedown = () => { activeSound(key) }
+    btn.onmouseup = () => { stopSound(key) }
+    btn.setAttribute('id', `${key}`)
     btn.setAttribute('style', `--c:${color}`)
+    btn.addEventListener('soundPlay', () => {
+    })
     return btn;
 }
 
-launchpadColors.forEach(color => {
-    launchpadGrid.appendChild(createBtn(color))
-})
+for (var i = 0; i < buttons; i++) {
+    launchpadGrid.appendChild(createBtn(launchpadColors[i], launchpadKeys[i]));
+}
 
+
+// Event Key Listeners
+// Activate Sounds for key pressed
+
+document.addEventListener('keydown', e => {
+    if (launchpadKeys.includes(e.key) ) {
+        const btn = document.getElementById(e.key)
+        btn.classList.add('active')
+        activeSound(e.key)
+    }
+});
+
+// Stop Sounds for key pressed
+document.addEventListener('keyup', e => {
+    if (launchpadKeys.includes(e.key) ) {
+        const btn = document.getElementById(e.key)
+        btn.classList.remove('active')
+        stopSound(e.key)
+    }
+});
