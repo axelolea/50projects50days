@@ -128,6 +128,7 @@ nav a:hover {
 /* Texto About */
 
 .about-container {
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 20px 0;
@@ -147,6 +148,7 @@ nav a:hover {
   align-items: center;
   flex-direction: column;
   padding-bottom: 10px;
+  width: 100vw;
 }
 
 .projects .text-bar, .about .text-bar {
@@ -260,4 +262,27 @@ nav a:hover {
 .btn.btn-secondary:hover{
   background-color: var(--secondary-color);
   color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects-container .title-day {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) { 
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+  .projects-container .title-day {
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+  }
 }
