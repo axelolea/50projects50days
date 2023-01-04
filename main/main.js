@@ -1,4 +1,4 @@
-const projectSection = document.getElementById("section-projects"); 
+const projectSection = document.getElementById("projects-section");
 
 const data = fetch("./src/days-info.json")
   .then((response) => {
@@ -9,17 +9,17 @@ const data = fetch("./src/days-info.json")
   });
 
 async function createCardsProjects(data) {
-  const links = data['links'];
+  const links = data["links"];
   projects = "";
   data["projects"].forEach((project) => {
-     projects += cardStructure(project, links)
+    projects += cardStructure(project, links);
   });
-  projectSection.innerHTML = projects
+  projectSection.innerHTML = projects;
 }
 
 function cardStructure(project, links) {
-  const card = document.createElement('div');
-  // card.innerHTML = 
+  const card = document.createElement("div");
+  // card.innerHTML =
   const card1 = `
   <div>
     <span class="title-day">Day ${project["number"]}</span>
@@ -27,11 +27,15 @@ function cardStructure(project, links) {
     <div class="card-body">
       <span class="card-title">${project["name"]}</span>
       <div class="buttons">
-        <a href="${links["general-demo-link"] + project["folder-name"]}" class="btn btn-primary">
+        <a href="${
+          links["general-demo-link"] + project["folder-name"]
+        }" class="btn btn-primary">
           Demo
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
-        <a href="${links["general-repo-link"] + project["folder-name"]}" class="btn btn-secondary">
+        <a href="${
+          links["general-repo-link"] + project["folder-name"]
+        }" class="btn btn-secondary">
           Code
           <i class="bi bi-code"></i>
         </a>

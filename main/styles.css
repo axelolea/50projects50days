@@ -1,7 +1,8 @@
 :root{
-  --primary-color: #0051ff;
+  --primary-color: rgb(91, 98, 163);
   --primary-dark-color: #465470;
-  --secondary-color: #84abff;
+  --secondary-color: #829fdd;
+  --bg-color: #323949;
 }
 
 * {
@@ -30,6 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background-color: var(--bg-color);
 }
 
 /* Navbar */
@@ -76,27 +78,82 @@ nav a:hover {
 /* Showcase */
 
 .showcase {
-  width: 100vw;
-  /* height: 90vh; */
-  height: 150px;
-}
-
-/* Bar Projects */
-
-.projects {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: calc(100vh - 70px);
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.showcase .text-header{
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px 70px;
+  text-align: center;
+  color: white;
+}
+
+.showcase .text-header h1{
+  font-size: 4rem;
+}
+
+.showcase .text-header h2 , p{
+  font-size: 2rem;
+}
+
+.showcase .bg-header {
+  position: absolute;
+  width: 100%;
+  height: 100% ;
+  z-index: -20;
+}
+
+.showcase .bg-header img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Texto About */
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.about-container p {
+  width: 80%;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Bar Projects */
+
+.projects, .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.projects .text-bar, .about .text-bar {
+  position: relative;
+  display: flex;
+  width: 100vw;
   height: 70px;
+  justify-content: center;
+  align-items: center;
   background-color: var(--primary-dark-color);
 }
 
-.projects h2 {
-  color: white;
-  position: relative;
-  padding: 0 auto;
+.about  .text-bar h2, .projects .text-bar h2 {
   font-size: 1.5rem;
+  color: white;
 }
 
 /* Projects */
@@ -115,6 +172,7 @@ nav a:hover {
   position: relative;
   cursor: pointer;
   height: 100%;
+  border: 2px solid var(--secondary-color);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5),
               0 0 7px rgba(0, 0, 0, 0.5);
 }
@@ -131,7 +189,7 @@ nav a:hover {
   padding: 0.25rem 0.5rem;
   opacity: 1;
   color: white;
-  background-color: rgb(78, 170, 255);
+  background-color: var(--secondary-color);
   font-size: 1rem;
   border-bottom-left-radius: 10px;
   transition: opacity 300ms ease-out;
