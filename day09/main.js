@@ -34,7 +34,9 @@ const launchpadGrid = document.getElementById('launchpad-grid')
 const createSound = (key) => {
     const sound = document.createElement("audio");
     sound.setAttribute('id', `sound-${key}`)
-    sound.setAttribute('src', `./sounds/${key}.mp3`)
+    // Original Line Code
+    // sound.setAttribute('src', `./sounds/${key}.mp3`)
+    sound.setAttribute('src', `./dross.mp3`)
     containerSounds.appendChild(sound)
 }
 
