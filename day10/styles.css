@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Seymour One', sans-serif;
+  --base-color: 189;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  background-color: hsl(var(--base-color), 100%, 95%);
+  transition: all 1s ease-out;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.jokes-container{
+  position: relative;
+  display: flex;
+  width: 80%;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.jokes-container::after{
+  content: '';
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, white, transparent 10%, transparent 90%, white);
+  z-index: 15;
+}
+
+.joke {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  font-size: 1.8rem;
+  text-align: center;
+  color: white;
+}
+
+.joke[jokePosition = "center"]{
+  transform: translateX(0);
+  color: rgb(190, 190, 190);
+  transition: 1s;
+  z-index: -10;
+}
+
+.joke[jokePosition = "right"]{
+  transform: translateX(-150%);
+  color: white;
+  transition-duration: 0;
+  z-index: -11;
+}
+
+.joke[jokePosition = "left"]{
+  transform: translateX(150%);
+  color: white;
+  transition: 1s;
+  z-index: -11;
+}
+
+.btn {
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  background-color: hsl(var(--base-color), 100%, 85%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  font-size: 1rem;
+  color: rgb(97, 97, 97);
+  border: 0;
+  border-radius: 5px;
+  transition: background-color 1s ease-out, transform 100ms ease-out;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
