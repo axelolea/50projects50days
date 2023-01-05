@@ -53,6 +53,12 @@
                 "number": 9,
                 "folder-name": "day09/",
                 "photo": "https://live.staticflickr.com/65535/52605777542_b0e6b68286_h.jpg"
+            },
+            {
+                "name": "Dad Jokes",
+                "number": 10,
+                "folder-name": "day10/",
+                "photo": "https://live.staticflickr.com/65535/52607820467_722b1d9df1_h.jpg"
             }
         ],
     "links": {
