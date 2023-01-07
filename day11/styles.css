@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  --size-keycap: 100px;
+  --bg-color-1: rgb(68, 68, 68);
+  --bg-color-2: rgb(34, 34, 34);
+  --color-pr-1-keycap: #717171;
+  --color-pr-2-keycap: #2e2e2e;
+  --color-sd-1-keycap: #373737;
+  --color-sd-2-keycap: #5c5c5c;
+  --color-border-keycap: rgb(43, 43, 43);
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(45deg, var(--bg-color-2), var(--bg-color-1), var(--bg-color-2));
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+.contaniner {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.key-text {
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c9c9c9;
+  border: 5px solid rgb(36, 36, 36);
+  background-color: #353535;
+  gap: 20px;
+}
+
+.key-text p {
+  padding: 1.2rem 2rem;
+}
+
+.key-container {
+  position: relative;
+  background: radial-gradient(circle at top 10px left 10px, var(--color-pr-1-keycap), var(--color-pr-2-keycap) 70%);
+  width: var(--size-keycap);
+  height: var(--size-keycap);
+  border: 2px solid var(--color-border-keycap);
+  border-radius: 10px;
+}
+
+.top-key {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 7px;
+  left: 7px;
+  background: linear-gradient(to right, var(--color-sd-1-keycap), var(--color-sd-2-keycap));
+  border: 1px solid var(--color-border-keycap);
+  border-radius: 10px;
+}
+
+.key {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: rgb(201, 201, 201);
+  font-size: 1.2rem;
+}
+
+.key-container.pressed {
+  background: radial-gradient(var(--color-pr-1-keycap), var(--color-pr-2-keycap));
+}
+
+.key-container.pressed .top-key {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, var(--color-sd-2-keycap), var(--color-sd-1-keycap));
+
+}

@@ -11,13 +11,15 @@ Aqui estaran todos los projectos que ire realizando en este repositorio.
 
 | Day | Name Project | Demo |
 | - | - | - |
-| 01 | [Expanding Cards](https://github.com/axelolea/50projects50days/tree/main/day01) | [Demo](https://axelolea.github.io/50projects50days/day01/) |
-| 02 | [Progress Steps](https://github.com/axelolea/50projects50days/tree/main/day02) | [Demo](https://axelolea.github.io/50projects50days/day02/) |
-| 03 | [Rotating Navigation Animation](https://github.com/axelolea/50projects50days/tree/main/day03) | [Demo](https://axelolea.github.io/50projects50days/day03/) |
-| 04 | [Hidden Search Widget](https://github.com/axelolea/50projects50days/tree/main/day04) | [Demo](https://axelolea.github.io/50projects50days/day04/) |
-| 05 | [Blurry Loading](https://github.com/axelolea/50projects50days/tree/main/day05) | [Demo](https://axelolea.github.io/50projects50days/day05/) |
-| 06 | [Scroll Animation](https://github.com/axelolea/50projects50days/tree/main/day06) | [Demo](https://axelolea.github.io/50projects50days/day06/) |
-| 07 | [Split Landing Page](https://github.com/axelolea/50projects50days/tree/main/day07) | [Demo](https://axelolea.github.io/50projects50days/day07/) |
-| 08 | [Form Wave](https://github.com/axelolea/50projects50days/tree/main/day08) | [Demo](https://axelolea.github.io/50projects50days/day08/) |
-| 09 | [Sound Board](https://github.com/axelolea/50projects50days/tree/main/day09) | [Demo](https://axelolea.github.io/50projects50days/day09/) |ç
-| 10 | [Dad Jokes](https://github.com/axelolea/50projects50days/tree/main/day10) | [Demo](https://axelolea.github.io/50projects50days/day10/) |
+| 01 | [ Expanding Cards ]( https://github.com/axelolea/50projects50days/tree/main/day01 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day01/ ) |
+| 02 | [ Progress Steps ]( https://github.com/axelolea/50projects50days/tree/main/day02 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day02/ ) |
+| 03 | [ Rotating Navigation Animation ]( https://github.com/axelolea/50projects50days/tree/main/day03 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day03/ ) |
+| 04 | [ Hidden Search Widget ]( https://github.com/axelolea/50projects50days/tree/main/day04 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day04/ ) |
+| 05 | [ Blurry Loading ]( https://github.com/axelolea/50projects50days/tree/main/day05 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day05/ ) |
+| 06 | [ Scroll Animation ]( https://github.com/axelolea/50projects50days/tree/main/day06 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day06/ ) |
+| 07 | [ Split Landing Page ]( https://github.com/axelolea/50projects50days/tree/main/day07 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day07/ ) |
+| 08 | [ Form Wave ]( https://github.com/axelolea/50projects50days/tree/main/day08 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day08/ ) |
+| 09 | [ Sound Board ]( https://github.com/axelolea/50projects50days/tree/main/day09 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day09/ ) |
+| 10 | [ Dad Jokes ]( https://github.com/axelolea/50projects50days/tree/main/day10 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day10/ ) |
+| 11 | [ Event KeyCodes ]( https://github.com/axelolea/50projects50days/tree/main/day11 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day11/ ) |
+| 12 | [ FAQ ]( https://github.com/axelolea/50projects50days/tree/main/day12 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day12/ ) |
