@@ -13,7 +13,7 @@ var minCircunference = 50
 
 function blurTransition (){
     x++;
-    loading = Math.floor((1.05   ** x) - 1);
+    loading = Math.floor((1.05 ** x) - 1);
     if(loading > 99){
         loading = 100
         loadingText.innerHTML = `${loading}%`

@@ -23,3 +23,6 @@ Aqui estaran todos los projectos que ire realizando en este repositorio.
 | 10 | [ Dad Jokes ]( https://github.com/axelolea/50projects50days/tree/main/day10 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day10/ ) |
 | 11 | [ Event KeyCodes ]( https://github.com/axelolea/50projects50days/tree/main/day11 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day11/ ) |
 | 12 | [ FAQ ]( https://github.com/axelolea/50projects50days/tree/main/day12 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day12/ ) |
+| 13 | [ Random Choice Picker ]( https://github.com/axelolea/50projects50days/tree/main/day13 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day13/ ) |
+| 14 | [ Animated Navigation ]( https://github.com/axelolea/50projects50days/tree/main/day14 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day14/ ) |
+| 15 | [ Incrementing Counter ]( https://github.com/axelolea/50projects50days/tree/main/day15 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day15/ ) |

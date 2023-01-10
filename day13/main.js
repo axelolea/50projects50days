@@ -22,6 +22,9 @@ function updateChoices(value) {
 }
 
 function randomSelect() {
+    if(document.querySelector('.active')){
+        unactiveBadge(document.querySelector('.active'))
+    }
     const times = 30
     const timeInterval = 100
     const interval = setInterval(() => {
