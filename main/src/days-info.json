@@ -59,6 +59,36 @@
                 "number": 10,
                 "folder-name": "day10/",
                 "photo": "https://live.staticflickr.com/65535/52607820467_722b1d9df1_h.jpg"
+            },
+            {
+                "name": "Event KeyCodes",
+                "number": 11,
+                "folder-name": "day11/",
+                "photo": "https://live.staticflickr.com/65535/52619269699_e8a4e8aaa1_h.jpg"
+            },
+            {
+                "name": "FAQ",
+                "number": 12,
+                "folder-name": "day12/",
+                "photo": "https://live.staticflickr.com/65535/52619489283_d214157618_h.jpg"
+            },
+            {
+                "name": "Random Choice Picker",
+                "number": 13,
+                "folder-name": "day13/",
+                "photo": "https://live.staticflickr.com/65535/52619010852_7d142ace96_h.jpg"
+            },
+            {
+                "name": "Animated Navigation",
+                "number": 14,
+                "folder-name": "day14/",
+                "photo": "https://live.staticflickr.com/65535/52619000631_450b04e307_h.jpg"
+            },
+            {
+                "name": "Incrementing Counter",
+                "number": 15,
+                "folder-name": "day15/",
+                "photo": "https://live.staticflickr.com/65535/52619433360_0201d41b05_h.jpg"
             }
         ],
     "links": {

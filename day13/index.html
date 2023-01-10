@@ -19,10 +19,15 @@
         <div class="random-text">
             <h1>Enter all of the choices<br>Press button when you're done.</h1>
             <textarea name="choices" id="choices" cols="30" rows="10"></textarea>
-            <button class="btn" onclick="randomSelect()">Start</button>
+            <button class="btn" onclick="spin()">Start</button>
         </div>
         <div class="roullette">
             <div class="box" id="box">
+                <canvas id="canvas" width="300" height="300"></canvas>
+                <svg class="arrow disable" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon points="0,100 100,100 50,0" class="arrow-svg"/>
+                </svg>
+                <h2 class="canvas-text">Insert multiple Choices</h2>
             </div>
         </div>
     </div>

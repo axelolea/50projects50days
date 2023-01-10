@@ -7,6 +7,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  --margin-color: #9b9b9b;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
 
 textarea {
   resize: none;
+  font-size: 1rem;
 }
 
 .random-container{
@@ -35,10 +37,12 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.2);
+  width: 70vw;
+  height: 80vh;
+  background-color: whitesmoke;
   box-shadow: 0 0 10px rgba(0 , 0, 0, 0.1);
   border-radius: 20px;
+  gap: 50px;
 }
 
 .random-text{
@@ -47,6 +51,8 @@ textarea {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+  gap: 15px;
   color: rgb(97, 97, 97);
   font-family: 'Roboto', sans-serif;
 }
@@ -56,37 +62,52 @@ textarea {
   font-size: 2rem;
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #4caeff;
+  background-color: var(--margin-color);
   border-radius: 50px;
+}
+
+.roullette {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
 }
 
 .box {
   position: relative;
-  width: 600px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
 }
 
-.choices {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  gap: 10px;
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  fill: var(--margin-color);
+  transform: translateY(-50%);
 }
 
-.badge{
-  width: auto;
-  height: auto;
-  color: rgb(0, 0, 0);
-  font-size: 25px;
-  padding: 5px 10px;
-  background-color: white;
-  border-radius: 5px;
+.arrow-svg {
+  transform-origin: center;
+  rotate: -90deg;
+}
+
+.disable {
+  display: none;
+  visibility: hidden;
+}
+
+.roullette .canvas-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
   text-align: center;
-  vertical-align: middle;
-}
-
-.badge.active {
-  background-color: rgb(104, 187, 255);
+  font-family: 'Roboto', sans-serif;
+  color: var(--margin-color);
+  transform: translate(-50%, -50%);
 }
