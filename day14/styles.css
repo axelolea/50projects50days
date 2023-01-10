@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  --time-transition: 100ms;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+.navbar-animated {
+  position: fixed;
+  width: 400px;
+  height: 50px;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-animated.active {
+  transform: translateY(-50%, 0%);
+}
+
+.navbar-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar-animated.active .navbar-list{
+  width: 200px;
+}
+
+.item-list {
+  position: relative;
+  height: 100%;
+  width: auto;
+}
+
+.item-list i{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.navbar-button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-icon .line {
+  transform-origin: center;
+  transition: y var(--time-transition) cubic-bezier(0,.85,.23,.91) var(--time-transition),
+    rotate var(--time-transition) cubic-bezier(1,0,1,.48),
+    opacity 0ms var(--time-transition);
+}
+
+.menu-icon.active .line {
+  transition: 
+    y var(--time-transition) cubic-bezier(1,0,1,.48),
+    rotate var(--time-transition) cubic-bezier(0,.85,.23,.91) var(--time-transition),
+    opacity 0s var(--time-transition) ;
+}
+
+.menu-icon.active .line{
+  y : 45;
+}
+
+.menu-icon.active .line-center{
+  opacity: 0;
+}
+
+.menu-icon.active .line-top{
+  rotate: 45deg;
+}
+
+.menu-icon.active .line-bottom {
+  rotate: -45deg;
+}

@@ -15,6 +15,7 @@ body {
   align-items: center;
   overflow: hidden;
   height: 100vh;
+  background: linear-gradient(45deg, #fbffc3, #91e5ff, #ff9bde);
 }
 
 .isotype {
@@ -23,4 +24,68 @@ body {
   height: 50px;
   top: 10px;
   left: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+.random-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0 , 0, 0, 0.1);
+  border-radius: 20px;
+}
+.random-text{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(97, 97, 97);
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #4caeff;
+  border-radius: 50px;
+}
+
+.box {
+  position: relative;
+  width: 600px;
+  height: 300px;
+}
+
+.choices {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 10px;
+}
+
+.badge{
+  width: auto;
+  height: auto;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.badge.active {
+  background-color: rgb(104, 187, 255);
 }

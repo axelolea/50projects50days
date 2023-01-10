@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/isotype-gray.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
-    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Random Choices Picker</title>
 </head>
 <body>
     <a href="javascript:window.history.back();">
         <img src="../assets/isotype-white.svg" alt="isotype" class="isotype">
     </a>
+    <div class="random-container">
+        <div class="random-text">
+            <h1>Enter all of the choices<br>Press button when you're done.</h1>
+            <textarea name="choices" id="choices" cols="30" rows="10"></textarea>
+            <button class="btn" onclick="randomSelect()">Start</button>
+        </div>
+        <div class="roullette">
+            <div class="box" id="box">
+            </div>
+        </div>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
