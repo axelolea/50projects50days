@@ -16,6 +16,7 @@
   -ms-user-select: none;
   user-select: none;
   font-family: 'Zen Dots', cursive;
+  /* outline: 2px solid limegreen !important; */
 }
 
 html {
@@ -154,7 +155,7 @@ nav a:hover {
 .projects .text-bar, .about .text-bar {
   position: relative;
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 70px;
   justify-content: center;
   align-items: center;
