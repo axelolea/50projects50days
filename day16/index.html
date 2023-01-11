@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/isotype-gray.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/isotype-gray.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap" rel="stylesheet">
     <title>Drink Water</title>
-</head>
-<body>
+  </head>
+  <body>
     <a href="javascript:window.history.back();">
-        <img src="../assets/isotype-white.svg" alt="isotype" class="isotype">
+      <img src="../assets/isotype.svg" alt="isotype" class="isotype" />
     </a>
     <div class="container">
-        <div class="show-section">
-            <div class="cup big-cup">
-                <div class="remaid-part">
-
-                </div>
-                <div class="percentege" id="percentege">
-
-                </div>
-            </div>
+      <div class="show-section">
+        <div class="cup big-cup">
+          <div class="remained" id="remained">
+            <span class="liters" id="liters"></span>
+            <small>Remained</small>
+          </div>
+          <div class="percentage" id="percentage"></div>
         </div>
-        <div class="interactive-section" id="cups-sec">
-
-        </div>
+      </div>
+      <div class="interactive-section" id="cups-sec"></div>
     </div>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
