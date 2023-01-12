@@ -8,6 +8,7 @@
   -ms-user-select: none;
   user-select: none;
   --margin-color: #9b9b9b;
+  --margin-color-dark: #616161;
 }
 
 body {
@@ -53,7 +54,7 @@ textarea {
   flex-direction: column;
   text-align: center;
   gap: 15px;
-  color: rgb(97, 97, 97);
+  color: var(--margin-color-dark);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -84,7 +85,7 @@ textarea {
 .arrow {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -5%;
   width: 30px;
   height: 30px;
   fill: var(--margin-color);
@@ -94,6 +95,8 @@ textarea {
 .arrow-svg {
   transform-origin: center;
   rotate: -90deg;
+  stroke: var(--margin-color-dark);
+  stroke-width: 10;
 }
 
 .disable {

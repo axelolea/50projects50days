@@ -9,13 +9,15 @@ const colors = ['#fffec2',
 '#ecd6c0',
 '#ffe5f0',
 '#dfcae1']
-const strokeColor = '#9b9b9b'
+const strokeColor = '#616161'
 const strokeSize = 4
 
-const animationSpin =  "transition-duration: 10s; transition-timing-function: cubic-bezier(0.6, 0, 0, 1);"
+const timeOutSpin = 10
+const animationSpin =  `transition-duration: ${timeOutSpin}s; transition-timing-function: cubic-bezier(0.38, 0, 0.15, 1);`
 
 const arrow = document.querySelector('.arrow')
 const canvasText = document.querySelector('.canvas-text')
+
 textArea.addEventListener('input', (e) => {
     updateChoices(e.target.value)
 })
@@ -34,49 +36,69 @@ function updateChoices(value) {
 }
 
 var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+
+canvas.width = 300
+canvas.height = 300
+
+var context = canvas.getContext("2d");
+
+class Fragment {
+    constructor(x, y, r, ap, af, color, text){
+        this.posX = x
+        this.posY = y
+        this.radio = r
+        this.ap = ap //first angle
+        this.af = af //final angle
+        this.color = color
+        this.text = text
+        this.ad = (this.af - this.ap) / 2 //divide angle
+        this.am = this.ap + this.ad // Text Angle
+        this.textRotate = Math.PI + this.am
+        this.desfaseRadio = 10
+        this.textRadio = this.radio - this.desfaseRadio
+        this.txtX = this.posX + (this.textRadio * Math.cos(this.am))
+        this.txtY = this.posY + (this.textRadio * Math.sin(this.am))
+    }
+    draw(ctx){
+        ctx.fillStyle = this.color
+        ctx.beginPath()
+        ctx.strokeStyle = strokeColor
+        ctx.lineWidth = strokeSize
+        ctx.moveTo(this.posX, this.posY)
+        ctx.arc(this.posX, this.posY, this.radio, this.ap, this.af, false)
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke()
+        // Rotate Text
+        ctx.translate(this.txtX, this.txtY)
+        ctx.rotate(this.textRotate)
+        ctx.fillStyle = strokeColor
+        ctx.font = "20px Arial";
+        ctx.textAlign = 'start'
+        ctx.textBaseline = 'middle'
+        ctx.fillText(this.text, 0, 0)
+        ctx.rotate(-this.textRotate)
+        ctx.translate(-this.txtX, -this.txtY)
+    }
+}
 
 const drawRoullette = (arr) => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    context.clearRect(0, 0, canvas.width, canvas.height);
     if(arr.length === 0){
         return
     }
     // Set parts with atribute 
     canvas.setAttribute('parts', arr.length)
     // Set pos X, Y and radio 
-    var X = canvas.width / 2;
-    var Y = canvas.height / 2;
-    var R = X - strokeSize;
+    var posX = canvas.width / 2;
+    var posY = canvas.height / 2;
+    var radio = posX - strokeSize;
     const parts = arr.length
     const radPart = (Math.PI * 2) / parts
     // Custom properties
-    ctx.strokeStyle = strokeColor;
-    ctx.lineWidth = strokeSize;
     for(let i = 0; i < parts; i++){
-        ctx.fillStyle = colors[(i % colors.length)];
-        var ap = radPart * i;
-        var af = radPart * (i + 1);
-        var Xap = X + (R * Math.cos(ap));
-        var Yap = Y + (R * Math.sin(ap));
-        var Xap = X + (R * Math.cos(ap));
-        var Yap = Y + (R * Math.sin(ap));
-        ctx.beginPath();
-        ctx.moveTo(X,Y);
-        ctx.lineTo(Xap,Yap);
-        ctx.arc(X,Y,R,ap,af);
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-        var amid = ((af - ap) / 2) + ap
-        var Xtxt = X + ((R * 0.8) * Math.cos(amid))
-        var Ytxt = Y + ((R * 0.8) * Math.sin(amid))
-        ctx.moveTo(X,Y)
-        ctx.font = "40px Georgia";
-        ctx.textAlign = 'center'
-        ctx.textBaseline = 'center'
-        ctx.fillStyle = strokeColor;
-        ctx.fillText(`${arr[i]}`, Xtxt, Ytxt + (strokeSize * 2))
-        // Fix rotate text coming soon
+        let frag = new Fragment(posX, posY, radio, radPart * i, radPart * (i + 1), colors[i % colors.length], arr[i])
+        frag.draw(context)
     }
 }
 
@@ -86,14 +108,19 @@ const randomSpin = (min, max) => {
     return number + min
 }
 
+
+let actualRad = 0
+
 function spin () {
     const roullette = document.getElementById('canvas')
-    const rotateRad = randomSpin(100, 200)
-    console.log(rotateRad)
-    const parts = parseInt(roullette.getAttribute('parts'))
-    const radsPart = (Math.PI * 2) / parts
-    const result = Math.floor((rotateRad % (Math.PI * 2)) / radsPart)
-    console.log(`${parts - result}`)
-    const style = `transform: rotate(${rotateRad}rad);` + animationSpin
+    actualRad = actualRad <= 100 ? randomSpin(100, 150) : randomSpin(0, 50)
+    const style = `transform: rotate(${actualRad}rad);` + animationSpin
     roullette.setAttribute('style', style)
+    printResult(actualRad, parseInt(roullette.getAttribute('parts')))
+}
+
+function printResult (rad, parts){
+    const radsPart = (Math.PI * 2) / parts
+    const result = Math.floor((rad % (Math.PI * 2)) / radsPart)
+    console.log(`${parts - result} / ${rad}`)
 }
