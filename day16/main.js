@@ -1,11 +1,12 @@
 const remained = document.getElementById('remained')
 const percentage = document.getElementById('percentage')
 const liters = document.getElementById('liters')
+const interactiveSection = document.getElementById("cups-sec");
 
 // Capacity
 const bigCupHeight = 500
 const litersDefault = 2000; //mililiters
-const totalCupsDefault = 12;
+const totalCupsDefault = 8;
 const numDecimals = 1
 let actualLiters = 0
 let actualTotalCups = 0
@@ -15,7 +16,7 @@ let actualCupCapacity = 0
 createCups(litersDefault, totalCupsDefault);
 
 function createCups(liters, cups) {
-  const interactiveSection = document.getElementById("cups-sec");
+  interactiveSection.innerText = ''
   const ml = liters / cups;
   for (let i = 0; i < cups; i++) {
     const cup = document.createElement("div");
@@ -57,15 +58,21 @@ function updateBigCup(totalCups) {
   } else {
     percentage.style.visibility = 'visible'
     percentage.style.height = `${(fullCups / actualTotalCups) * bigCupHeight}px`
-    percentage.innerText = `${((fullCups / actualTotalCups) * 100).toFixed(numDecimals)}%`
+    const percentageNumber = (fullCups / actualTotalCups) * 100
+    percentage.innerText = `${percentageNumber % 1 ? percentageNumber.toFixed(numDecimals) : percentageNumber.toFixed()}%`
   }
   
   if(fullCups === totalCups) {
       remained.style.visibility = 'hidden'
       remained.style.height = 0
   } else {
-      remained.style.visibility = 'visible'
-      const litersFull = actualLiters - (actualCupCapacity * fullCups)
-      liters.innerText = litersFull >= 1000 ? `${((litersFull) / 1000).toFixed(numDecimals)}L` : `${litersFull.toFixed(numDecimals)}ml`
+    remained.style.visibility = 'visible'
+    let prefix = 'ml'
+    let litersFull = actualLiters - (actualCupCapacity * fullCups)
+    if (litersFull >= 1000){
+      prefix = 'L'
+      litersFull = litersFull / 1000
+    }
+    liters.innerText = `${litersFull % 1 ? litersFull.toFixed(numDecimals) : litersFull.toFixed()}${prefix}`
   }
 }
