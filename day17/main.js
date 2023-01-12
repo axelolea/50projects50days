@@ -39,9 +39,11 @@ async function getDataSearch(search){
 function showAnimes(animes) {
     main.innerHTML = ''
     animes.forEach( anime => {
-        const { images, episodes, mal_id, score, title, synopsis, airing} = anime
+        const { images, episodes, mal_id, score, title, synopsis, airing } = anime
         const animeCard = document.createElement('div')
         const color = getClassByScore(score)
+        let shortSynopsis = synopsis ? synopsis : ''
+        shortSynopsis = shortSynopsis.length >= maxLenghtSynopsis ? synopsis.substr(0, maxLenghtSynopsis) + '...' : synopsis
         animeCard.classList.add('anime')
         animeCard.innerHTML = `
             <div class="card-anime">
@@ -58,7 +60,7 @@ function showAnimes(animes) {
                         ${score ? score : '???'} <i class="bi bi-star-fill"></i>
                     </h4>
                 </div>
-                <p>${synopsis.length >= maxLenghtSynopsis ? synopsis.substr(0, maxLenghtSynopsis) + '...' : synopsis}</p>
+                <p>${shortSynopsis}</p>
                 <a href="https://myanimelist.net/anime/${mal_id}">
                     <button class="btn">More Info</button>
                 </a>
