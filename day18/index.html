@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/isotype-gray.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Background Slider</title>
+</head>
+<body>
+    <a href="javascript:window.history.back();">
+        <img src="../assets/isotype-white.svg" alt="isotype" class="isotype">
+    </a>
+    <div class="container">
+        <div class="right-arrow btn" id="right-btn">
+            <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                <polyline points="200,500 800,800 800,200" />
+            </svg>
+        </div>
+        <div class="images-container" id="images-container">
+        </div>
+        <div class="left-arrow btn" id="left-btn">
+            <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                <polyline points="800,500 200,200 200,800" />
+            </svg>
+        </div>
+    </div>
+    <img class="bg" id="bg">
+    <script src="./main.js"></script>
+</body>
+</html>
