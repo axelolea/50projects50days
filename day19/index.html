@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/isotype-gray.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Theme Clock</title>
+</head>
+<body>
+    <a href="javascript:window.history.back();">
+        <img src="../assets/isotype-white.svg" alt="isotype" class="isotype">
+    </a>
+    <button id="theme" class="btn">Neon Mode</button>
+    <div class="clock-container">
+      <div class="clock">
+        <svg viewBox="0 0 900 400" class="body-clock" preserveAspectRatio="none">
+            <path class="style-1" d="M 83.70766,202.53399 H 820.07875"/>
+            <path class="style-2" d="m 117.76857,178.0393 1e-5,47.16846"/>
+            <path class="style-2" d="M 780.12201,180.55099 V 224.7805"/>
+            <path class="style-4" d="m 252.77946,97.917719 15.27581,25.963241"/>
+            <path class="style-4" d="m 352.33526,54.048552 8.62326,28.373187"/>
+            <path class="style-4" d="m 450,40.967133 -1.28438,30.283406"/>
+            <path class="style-4" d="m 544.19169,56.108836 -8.72182,29.262903"/>
+            <path class="style-4" d="M 644.12962,94.967719 628.0111,123.20842"/>
+            <path class="style-4" d="m 628.22306,282.26965 16.16244,26.4416"/>
+            <path class="style-4" d="m 535.98395,321.51762 8.97648,29.54494"/>
+            <path class="style-4" d="M 450,365.05837 V 331.92372"/>
+            <path class="style-4" d="m 361.75855,318.56762 -8.85058,35.44494"/>
+            <path class="style-4" d="m 268.52853,279.31965 -14.68675,26.31431"/>
+            <path class="style-5" d="m 57.506579,164.41644 c 0,0 66.808111,34.6887 127.483411,-6.63773 60.67529,-41.32643 148.5716,-104.147241 262.6816,-104.147241 114.11001,0 217.37478,72.379921 242.87608,89.353341 25.50131,16.97342 68.09627,60.58316 135.81724,22.79863"/>
+            <path class="style-5" d="m 829.31491,243.64335 c 0,0 -53.69514,-41.32993 -106.89933,-3.07247 -53.20419,38.25747 -144.96159,111.52618 -274.42681,111.52618 -129.46523,0 -263.51941,-108.56856 -263.51941,-108.56856 0,0 -45.98546,-42.97686 -113.784269,-0.21791"/>
+        </svg>
+        <!-- <img src="../assets/clock.svg" alt="body-clock" class="body-clock"> -->
+        <div class="hour needle" id="hour">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="figure">
+                <polyline points="0,100 100,100 50,0" />
+            </svg>
+        </div>
+        <div class="minute needle" id="minute"></div>
+        <div class="second needle" id="second"></div>
+      </div>
+      <div class="text-container">
+          <div class="time" id="time"></div>
+          <div class="date" id="date"></div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

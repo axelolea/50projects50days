@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* outline: 2px solid limegreen !important; */
+}
+
+:root{
+  --height-clock: 300px;
+  --width-clock: 600px;
+  --needle-hour-color: #eaeae2;
+  --needle-minute-color: #f79945;
+  --needle-second-color: #c2422c;
+  --clock-center-color: #3f4042;
+  --color-text: #272727;
+  --color-clock-1: #585954;
+  --color-clock-2: #836857;
+  --color-clock-3: #d6c9a7;
+}
+
+html {
+  transition: all 300ms ease-out;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  background: white;
+  transition: background 200ms ease-out;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
+  background: transparent;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: var(--clock-center-color);
+  transition: all 300ms ease-out;
+  border-color: var(--clock-center-color);
+}
+
+.btn:hover {
+  background-color: var(--clock-center-color);
+  color: white;
+}
+
+/* Inspired by Wall Clock - Eye Clock
+https://www.vitra.com/en-li/living/product/details/eye-clock */
+
+.style-1 {
+  stroke: var(--color-clock-2);
+  stroke-width:11.6;
+  stroke-linecap:round;
+  stroke-opacity:1;
+}
+
+.style-2 {
+  stroke:var(--color-clock-1);
+  stroke-width:11.6;
+  stroke-linecap:butt;
+  stroke-opacity:1;
+}
+
+.style-4 {
+  stroke: var(--color-clock-1);
+  stroke-width:5.9;
+  stroke-linecap:round;
+  stroke-opacity:1
+}
+
+.style-5 {
+  fill:none;
+  stroke: var(--color-clock-3);
+  stroke-width:5.9;
+  stroke-linecap:round;
+  stroke-opacity:1
+}
+
+.clock {
+  position: relative;
+  display: flex;
+  width: var(--width-clock);
+  height: var(--height-clock);
+  justify-content: center;
+  align-items: center;
+}
+
+.body-clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.clock::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clock-center-color);
+}
+
+.clock::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--needle-second-color);
+}
+
+.needle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 120px;
+  transform-origin: bottom center;
+}
+
+.needle.hour {
+  width: 50px;
+  height: 80px;
+  transform-origin: 50% 80%;
+  fill: var(--needle-hour-color);
+}
+
+.needle.minute {
+  width: 6px;
+  height: 150px;
+  transform-origin: 50% 80%;
+  background-color: var(--needle-minute-color);
+}
+
+.needle.second {
+  width: 3px;
+  height: 70px;
+  transform-origin: 50% 80%;
+  background-color: var(--needle-second-color);
+}
+
+.figure {
+  width: 100%;
+  height: 100%;
+}
+
+.text-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.time {
+  font-size: 3rem;
+}
+
+.date {
+  font-size: 2rem;
+}
+
+
+/* Neon Effect */
+
+html.dark {
+  color: white;
+  background: radial-gradient(#110a1b , #110a1b 50%);
+  transition: all 300ms ease-out;
+  --color-clock-1: #00f4ed;
+  --color-clock-2: #f9feaf;
+  --color-clock-3: #feaff6;
+  --needle-hour-color: #75ffff;
+  --needle-minute-color: #feaff6;
+  --needle-second-color: #ff8c77;
+  --clock-center-color: #f9feaf;
+}
+
+html.dark body{
+  background: radial-gradient(#231438 , #110a1b 50%);
+}
+
+html.dark .text-container {
+  text-shadow:  0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+html.dark .style-1{
+  filter: drop-shadow(0 0 10px rgba(249, 254, 175, 0.5))
+          drop-shadow(0 0 20px rgba(249, 254, 175, 0.2));
+}
+
+html.dark .style-2, html.dark .style-4{
+  filter: drop-shadow(0 0 10px rgba(0, 244, 237, 0.5))
+          drop-shadow(0 0 20px rgba(0, 244, 237, 0.2));
+}
+
+html.dark .style-5{
+  filter: drop-shadow(0 0 10px rgba(254, 175, 246, 0.5))
+          drop-shadow(0 0 20px rgba(254, 175, 246, 0.2));
+}
+
+html.dark .needle.minute {
+  box-shadow: 0 0 10px rgba(247, 153, 69, 0.5),
+              0 0 20px rgba(247, 153, 69, 0.2);
+
+}
+
+html.dark .needle.second {
+  box-shadow: 0 0 10px rgba(250, 71, 39, 0.7),
+              0 0 20px rgba(194, 66, 44, 0.6);
+}
+
+html.dark .clock::before {
+  box-shadow:   0 0 10px rgba(249, 254, 175, 0.4),
+                0 0 20px rgba(249, 254, 175, 0.2);
+}
+
+html.dark .btn {
+  border-color: white;
+}
+
+html.dark .btn:hover {
+  background-color: white;
+  color: black;
+}

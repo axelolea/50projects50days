@@ -12,6 +12,13 @@ const search = document.getElementById('search')
 getAnimes(apiUrl + defaultUrl)
 
 async function getAnimes(url) {
+    // const parameters = {
+    //     method: 'GET',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     mode: 'same-origin'
+    // };
     const res = await fetch(url)
     const data = await res.json()
     showAnimes(data.data)
@@ -19,18 +26,19 @@ async function getAnimes(url) {
 
 async function getDataSearch(search){
     // const parameters = {
-    //     q: `${search}`,
-    // };
-    // const options = {
     //     method: 'GET',
-    //     body: JSON.stringify(parameters),
     //     headers: {
     //         'Content-Type': 'application/json'
     //     },
+    //     q: `${search}`,
+    // };
+    // const options = {
+    //     body: JSON.stringify(parameters),
     // }
     // const res = await fetch(apiUrl + searchUrl, parameters)
 
     const res = await fetch(apiUrl + searchUrl + '?order_by=popularity&q=' + search)
+
     const data = await res.json()
     showAnimes(data.data)
 }
@@ -38,6 +46,7 @@ async function getDataSearch(search){
 
 function showAnimes(animes) {
     main.innerHTML = ''
+    const fragmentAnime = document.createDocumentFragment()
     animes.forEach( anime => {
         const { images, episodes, mal_id, score, title, synopsis, airing } = anime
         const animeCard = document.createElement('div')
@@ -66,8 +75,9 @@ function showAnimes(animes) {
                 </a>
             </div>
         `
-        main.appendChild(animeCard)
+        fragmentAnime.appendChild(animeCard)
     })
+    main.appendChild(fragmentAnime)
 }
 
 
