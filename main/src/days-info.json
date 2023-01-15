@@ -89,6 +89,36 @@
                 "number": 15,
                 "folder-name": "day15/",
                 "photo": "https://live.staticflickr.com/65535/52619433360_0201d41b05_h.jpg"
+            },
+            {
+                "name": "Drink Water",
+                "number": 16,
+                "folder-name": "day16/",
+                "photo": ""
+            },
+            {
+                "name": "Anime App",
+                "number": 17,
+                "folder-name": "day17/",
+                "photo": ""
+            },
+            {
+                "name": "Background Slider",
+                "number": 18,
+                "folder-name": "day18/",
+                "photo": ""
+            },
+            {
+                "name": "Theme Clock",
+                "number": 19,
+                "folder-name": "day19/",
+                "photo": ""
+            },
+            {
+                "name": "Button Ripple Effect",
+                "number": 20,
+                "folder-name": "day20/",
+                "photo": ""
             }
         ],
     "links": {

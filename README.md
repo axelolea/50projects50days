@@ -26,3 +26,8 @@ Aqui estaran todos los projectos que ire realizando en este repositorio.
 | 13 | [ Random Choice Picker ]( https://github.com/axelolea/50projects50days/tree/main/day13 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day13/ ) |
 | 14 | [ Animated Navigation ]( https://github.com/axelolea/50projects50days/tree/main/day14 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day14/ ) |
 | 15 | [ Incrementing Counter ]( https://github.com/axelolea/50projects50days/tree/main/day15 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day15/ ) |
+| 16 | [ Drink Water ]( https://github.com/axelolea/50projects50days/tree/main/day16 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day16/ ) |
+| 17 | [ Anime App ]( https://github.com/axelolea/50projects50days/tree/main/day17 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day17/ ) |
+| 18 | [ Background Slider ]( https://github.com/axelolea/50projects50days/tree/main/day18 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day18/ ) |
+| 19 | [ Theme Clock ]( https://github.com/axelolea/50projects50days/tree/main/day19 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day19/ ) |
+| 19 | [ Button Ripple Effect ]( https://github.com/axelolea/50projects50days/tree/main/day20 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day20/ ) |

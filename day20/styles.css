@@ -34,7 +34,7 @@ body {
   border: none;
   background: linear-gradient(var(--bg-color-1), var(--bg-color-2));
   padding: 1rem 2rem;
-  font-size: 2rem;
+  font-size: 4rem;
   color: white;
   overflow: hidden;
   border-radius: 20px;
