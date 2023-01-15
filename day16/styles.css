@@ -7,10 +7,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  outline: 0;
   --border-cup: 15px;
-  --water-color: #5ee7ff;
-  --water-color-light: #d9ffff;
-  --water-color-dark: #13293d;
+  --water-color: #6fa9dd;
 }
 
 body {
@@ -20,13 +19,13 @@ body {
   flex-direction: column;
   overflow: hidden;
   height: 100vh;
-  background-color: rgb(190, 255, 255);
+  background-color: #2c292c;
   font-family: 'Sofia Sans', sans-serif;
 }
 
 h1{
   font-size: 2rem;
-  color: var(--water-color-dark);
+  color: white;
 }
 
 .isotype {
@@ -48,23 +47,23 @@ h1{
 }
 
 .cup {
-  color: var(--water-color-dark);
-  border: 4px solid var(--water-color-dark);
+  color: white;
+  border: 6px solid transparent;
   border-bottom-left-radius: var(--border-cup);
   border-bottom-right-radius: var(--border-cup);
+  box-shadow: 0 0 0 4px #fff, 0 20px 35px rgba(0,0,0,0.5);
 }
 
 .full {
   background-color: var(--water-color);
-  color: white;
 }
 
 .small-cup {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 130px;
+  width: 60px;
+  height: 100px;
 }
 
 .big-cup {
@@ -103,12 +102,114 @@ h1{
   font-size: 3rem;
   background-color: var(--water-color);
   height: 0;
+	animation: animate 3s cubic-bezier(0,.2,1,.8) infinite;
 }
 
+.interactive-section{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+}
 
-.interactive-section {
+.cup-section {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+
+.button-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button-section h4 {
+  color: white;
+  font-size: 1rem;
+}
+
+.edit-liters, .edit-cups {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-liters span, .edit-cups span{
+  width: 70px;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: transparent;
+  cursor: pointer;
+}
+
+.btn i {
+  color: white;
+  font-size: 2rem;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		  clip-path: polygon(
+			0% 0%,
+      25% 1%,
+      50% 3%,
+      75% 5%,
+      100% 6%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+  25% {
+    clip-path: polygon(
+      0% 3%,
+      25% 5%,
+      50% 6%,
+      75% 5%,
+      100% 3%,
+      100% 100%,
+      0% 100%
+      );
+  }
+	50% {
+		clip-path: polygon(
+			0% 6%,
+      25% 5%,
+      50% 3%,
+      75% 1%,
+      100% 0%,
+			100% 100%,
+			0% 100%
+		);
+	}
+  75% {
+		clip-path: polygon(
+			0% 3%,
+      25% 1%,
+      50% 0%,
+      75% 1%,
+      100% 3%,
+      100% 100%,
+      0% 100%
+		);
+	}
 }

@@ -1,13 +1,26 @@
+// Main Components
 const remained = document.getElementById('remained')
 const percentage = document.getElementById('percentage')
 const liters = document.getElementById('liters')
 const interactiveSection = document.getElementById("cups-sec");
+// Edit Components
+const restCups = document.getElementById('rest-cups')
+const addCups = document.getElementById('add-cups')
+const textCups = document.getElementById('text-cups')
+const restLiters = document.getElementById('rest-liters')
+const addLiters = document.getElementById('add-liters')
+const textLiters = document.getElementById('text-liters')
 
 // Capacity
 const bigCupHeight = 500
 const litersDefault = 2000; //mililiters
 const totalCupsDefault = 8;
 const numDecimals = 1
+const maxCups = 12
+const minCups = 6
+const maxLiters = 3000
+const minLiters = 1000
+const snapLiters = 200
 let actualLiters = 0
 let actualTotalCups = 0
 let actualCupCapacity = 0
@@ -28,6 +41,9 @@ function createCups(liters, cups) {
   actualLiters = liters
   actualTotalCups = cups
   actualCupCapacity = ml
+  textCups.innerText = `${actualTotalCups}`
+  const textLitersInner = actualLiters / 1000
+  textLiters.innerText = `${textLitersInner % 1 == 0 ? textLitersInner.toFixed(): textLitersInner.toFixed(1)}L`
   updateBigCup(cups)
 }
 
@@ -63,9 +79,11 @@ function updateBigCup(totalCups) {
   }
   
   if(fullCups === totalCups) {
+      remained.style.opacity = 0
       remained.style.visibility = 'hidden'
       remained.style.height = 0
   } else {
+    remained.style.opacity = 1
     remained.style.visibility = 'visible'
     let prefix = 'ml'
     let litersFull = actualLiters - (actualCupCapacity * fullCups)
@@ -76,3 +94,33 @@ function updateBigCup(totalCups) {
     liters.innerText = `${litersFull % 1 ? litersFull.toFixed(numDecimals) : litersFull.toFixed()}${prefix}`
   }
 }
+
+// Edit Buttons
+
+restCups.addEventListener('click', () => {
+  if(minCups < actualTotalCups){
+    actualTotalCups--
+    createCups(actualLiters, actualTotalCups)
+  }
+})
+
+addCups.addEventListener('click', () => {
+  if(maxCups > actualTotalCups){
+    actualTotalCups++
+    createCups(actualLiters, actualTotalCups)
+  }
+})
+
+restLiters.addEventListener('click', () => {
+  if(minLiters < actualLiters){
+    actualLiters -= snapLiters
+    createCups(actualLiters, actualTotalCups)
+  }
+})
+
+addLiters.addEventListener('click', () => {
+  if(maxLiters > actualLiters){
+    actualLiters += snapLiters
+    createCups(actualLiters, actualTotalCups)
+  }
+})
