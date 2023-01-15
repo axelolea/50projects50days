@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  --bg-color-1: rgb(37, 196, 245);
+  --bg-color-2: rgb(139, 228, 255);
+  --effect-duration: 1s;
+  --effect-function: cubic-bezier(.12,.44,.28,.97);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+.btn {
+  position: relative;
+  border: none;
+  background: linear-gradient(var(--bg-color-1), var(--bg-color-2));
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  color: white;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn .effect {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.6;
+  border-radius: 50%;
+  background-color: white;
+  animation: effectRipple var(--effect-duration) ease-out;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes effectRipple {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
