@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  --size-box: 180px;
+  --color-shadow: rgba(255, 255, 255, 0.5);
+  --color-hover:  rgba(119, 167, 255, 0.5);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  background-image: url('https://149366088.v2.pressablecdn.com/wp-content/uploads/2022/03/jammy-jellyfish-wallpaper.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+.grid-desktop {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.box {
+  position: relative;
+  width: var(--size-box);
+  height: var(--size-box);
+}
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: var(--size-box);
+  height: var(--size-box);
+  cursor: pointer;
+}
+
+.icon img {
+  width: 50%;
+  height: 50%;
+  object-fit: fill;
+  object-position: center;
+}
+
+.icon span {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.hold {
+  border: transparent;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hovered {
+  border: 3px solid var(--color-hover);
+  background-color: var(--color-hover);
+}
