@@ -1,35 +1,107 @@
 const options = document.getElementById('options')
-
 const canvas = document.getElementById('canvas')
 const context = canvas.getContext('2d')
-const canvasHeight = 600
-const canvasWidth = 800
-
-let isDrawing = false;
-let selectColor = '#f00'
-let widthStoke = 5
-let snapshot;
+const undo = document.getElementById('undo')
+const clear = document.getElementById('clear')
+// Draw Properties
 let prevX;
 let prevY;
+let snapshot = [];
+const maxStrokeWidth = 50
+const minStrokeWidth = 5
+const defaultTool = 'pencil'
+const defaultColor = '#000'
+const defaultWidth = 5
+// Default Settings
+let isDrawing = false;
+let selectColor = defaultColor
+let widthStoke = defaultWidth
 let fillFigure = false;
-let tool = 'line'
-
+let actualTool = defaultTool
+// Tools Array 
 const tools = [{
-    'tool': 'pencil',
-    'icon': 'bi-pencil-fill'
+        'tool': 'pencil',
+        'icon': 'bi-pencil-fill',
+        'fill': false,
+        'id': 'pencil',
+    },
+    {
+        'tool': 'line',
+        'icon': 'bi-slash-lg',
+        'fill': false,
+        'id': 'line',
+
+    },
+    {
+        'tool': 'circle',
+        'icon': 'bi-circle-fill',
+        'fill': true,
+        'id': 'circle-fill',
+    },
+    {
+        'tool': 'circle',
+        'icon': 'bi-circle',
+        'fill': false,
+        'id': 'circle-stroke',
+    },
+    {
+        'tool': 'square',
+        'icon': 'bi-square-fill',
+        'fill': true,
+        'id': 'square-fill',
+    },
+    {
+        'tool': 'square',
+        'icon': 'bi-square',
+        'fill': false,
+        'id': 'square-stroke',
 }]
 
-function empytCanvas () {
+function removeActive(){
+    const buttons = document.querySelectorAll('.option')
+    buttons.forEach(btn => btn.classList.remove('active'))
+}
+
+function createTool(){
+
+    const fragmentTools = document.createDocumentFragment()
+    tools.forEach(tool => {
+        const btn = document.createElement('button')
+        const icon = document.createElement('i')
+        icon.classList.add('bi', tool.icon)
+        btn.classList.add('option', 'btn')
+        if(actualTool == tool.tool) btn.classList.add('active')
+        btn.id = tool.id
+        btn.append(icon)
+        btn.addEventListener('click', () => {
+            const btnActive = document.getElementById(`${tool.id}`)
+            removeActive()
+            btnActive.classList.add('active')
+            actualTool = tool.tool
+            fillFigure = tool.fill
+        })
+        fragmentTools.append(btn)
+    })
+    options.append(fragmentTools)
+}
+
+const pushSnapshot = () => {
+    isDrawing = false
+    snapshot.push(context.getImageData(0, 0, canvas.width, canvas.height))
+}
+
+function clearCanvas () {
     context.fillStyle = '#fff'
     context.fillRect(0, 0, canvas.width, canvas.height)
     context.fillStyle = selectColor;
-    snapshot = context.getImageData(0, 0, canvas.width, canvas.height)
+    pushSnapshot()
 }
 
 window.addEventListener('load', () => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-    empytCanvas()
+    createTool()
+    clearCanvas()
 })
 
 function drawPoint(x, y){
@@ -57,6 +129,21 @@ function drawRectangle(x1, y1, x2, y2){
     }
 }
 
+function drawCircle(x1, y1, x2, y2){
+    const radX = (x2 - x1) / 2
+    const radY = (y2 - y1) / 2
+    const x = x1 + radX
+    const y = y1 + radY
+    context.beginPath();
+    context.ellipse(x, y, Math.abs(radX), Math.abs(radY), 0, 0, Math.PI * 2);
+    if(fillFigure){
+        context.fill();
+    }
+    else{
+        context.stroke(); 
+    }
+}
+
 function startDrawing (e){
     isDrawing = true;
     prevX = e.offsetX;
@@ -66,123 +153,46 @@ function startDrawing (e){
     context.lineWidth = widthStoke * 2
 }
 
-function endDrawing (){
+function endDrawing(){
+    if(!isDrawing) return;
     isDrawing = false
-    snapshot = context.getImageData(0, 0, canvas.width, canvas.height)
+    pushSnapshot()
+}
+
+function undoAction() {
+    if(snapshot.length <= 1) return;
+    snapshot.pop()
+    context.putImageData(snapshot.at(-1), 0, 0)
 }
 
 function drawing (e) {
     if(!isDrawing) return;
-    context.putImageData(snapshot, 0, 0)
-    if(tool == 'brush'){
+    if(actualTool == 'pencil'){
         drawLine(prevX, prevY, e.offsetX, e.offsetY)
         prevX = e.offsetX
         prevY = e.offsetY
-        snapshot = context.getImageData(0, 0, canvas.width, canvas.height)
+        return
     }
-    else if(tool == 'line'){
+    
+    // Dynamic Draw
+    context.putImageData(snapshot.at(-1), 0, 0)
+    
+    if(actualTool == 'line'){
         drawLine(prevX, prevY, e.offsetX, e.offsetY)
     }
-    else if ( tool == 'rect' ){
+    else if (actualTool == 'square' ){
         drawRectangle(prevX, prevY, e.offsetX, e.offsetY)
+    }
+    else if (actualTool == 'circle' ){
+        drawCircle(prevX, prevY, e.offsetX, e.offsetY)
     }
 }
 
 
 
 canvas.addEventListener('mousedown', startDrawing)
-canvas.addEventListener('mouseup', endDrawing)
 canvas.addEventListener('mousemove', drawing)
-
-
-
-
-
-
-
-
-// const canvas = document.getElementById('canvas');
-// const increaseBtn = document.getElementById('increase');
-// const decreaseBtn = document.getElementById('decrease');
-// const sizeEL = document.getElementById('size');
-// const colorEl = document.getElementById('color');
-// const clearEl = document.getElementById('clear');
-
-
-// let size = 10
-// let isPressed = false
-// colorEl.value = 'black'
-// let color = colorEl.value
-// let x
-// let y
-
-// canvas.addEventListener('mousedown', (e) => {
-//     isPressed = true
-
-//     x = e.offsetX
-//     y = e.offsetY
-// })
-
-// document.addEventListener('mouseup', (e) => {
-//     isPressed = false
-
-//     x = undefined
-//     y = undefined
-// })
-
-// canvas.addEventListener('mousemove', (e) => {
-//     if(isPressed) {
-//         const x2 = e.offsetX
-//         const y2 = e.offsetY
-
-//         drawCircle(x2, y2)
-//         drawLine(x, y, x2, y2)
-
-//         x = x2
-//         y = y2
-//     }
-// })
-
-// function drawCircle(x, y) {
-//     ctx.beginPath();
-//     ctx.arc(x, y, size, 0, Math.PI * 2)
-//     ctx.fillStyle = color
-//     ctx.fill()
-// }
-
-// function drawLine(x1, y1, x2, y2) {
-//     ctx.beginPath()
-//     ctx.moveTo(x1, y1)
-//     ctx.lineTo(x2, y2)
-//     ctx.strokeStyle = color
-//     ctx.lineWidth = size * 2
-//     ctx.stroke()
-// }
-
-// function updateSizeOnScreen() {
-//     sizeEL.innerText = size
-// }
-
-// increaseBtn.addEventListener('click', () => {
-//     size += 5
-
-//     if(size > 50) {
-//         size = 50
-//     }
-
-//     updateSizeOnScreen()
-// })
-
-// decreaseBtn.addEventListener('click', () => {
-//     size -= 5
-
-//     if(size < 5) {
-//         size = 5
-//     }
-
-//     updateSizeOnScreen()
-// })
-
-// colorEl.addEventListener('change', (e) => color = e.target.value)
-
-// clearEl.addEventListener('click', () => ctx.clearRect(0,0, canvas.width, canvas.height))
+canvas.addEventListener('mouseup', endDrawing)
+canvas.addEventListener('mouseout', endDrawing)
+undo.addEventListener('click', undoAction)
+clear.addEventListener('click', clearCanvas)

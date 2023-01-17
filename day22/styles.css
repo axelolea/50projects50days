@@ -7,6 +7,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  --size-btn: 50px;
+  --color-1: #3b2683;
+  --color-2: #a32b97;
 }
 
 body {
@@ -15,7 +18,7 @@ body {
   align-items: center;
   overflow: hidden;
   height: 100vh;
-  background-color: aqua;
+  background: linear-gradient(45deg, var(--color-1), var(--color-2));
 }
 
 .isotype {
@@ -27,11 +30,73 @@ body {
 }
 
 .draw-container {
-  width: 800px;
-  height: 500px;
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+
+.settings {
+  display: flex;
+  width: 140px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.options, .actions {
+  position: relative;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+  width: var(--size-btn);
+  height: var(--size-btn);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+}
+
+.btn:hover{
+  background-color: rgba(240, 248, 255, 0.4);
+}
+
+.btn.active{
+  color: white;
+  border-color: white;
+  background-color: rgba(240, 248, 255, 0.4);
+}
+
+.separeitor {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.5;
 }
 
 canvas {
-  width: 100%;
-  height: 100%;
+  position: relative;
+  width: 600px;
+  height: 500px;
+  border: 5px solid rgb(67, 0, 105);
+}
+canvas::before, canvas::after {
+  content: '';
+  width: 600px;
+  height: 50px;
+  border: 5px solid rgb(67, 0, 105);
 }

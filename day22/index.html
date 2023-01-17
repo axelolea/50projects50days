@@ -13,35 +13,27 @@
     <a href="javascript:window.history.back();">
         <img src="../assets/isotype-white.svg" alt="isotype" class="isotype">
     </a>
+
     <div class="draw-container">
+
         <canvas id="canvas"></canvas>
+        <div class="settings">
+            <div class="options" id="options">
+            </div>
+            <div class="separeitor"></div>
+            <div class="actions" id="actions">
+                <button class="option btn" id="undo">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+                <button class="option btn">
+                    <i class="bi bi-trash-fill" id="clear"></i>
+                </button>
+            </div>
+            <div class="separeitor"></div>
+            <div class="colors" id="colors">
+            </div>
+        </div>
     </div>
-    <div class="options" id="options">
-        <button class="option btn">
-            <i class="bi bi-pencil-fill"></i>
-        </button>
-        <button class="option btn">
-            <i class="bi bi-slash-lg"></i>
-        </button>
-        <button class="option btn">
-            <i class="bi bi-circle-fill"></i>
-        </button>
-        <button class="option btn">
-            <i class="bi bi-circle"></i>
-        </button>
-        <button class="option btn">
-            <i class="bi bi-square-fill"></i>
-        </button>
-        <button class="option btn">
-            <i class="bi bi-square"></i>
-        </button>
-        <button class="option btn">
-            <i class="bi bi-arrow-counterclockwise"></i>
-        </button>
-        <button class="option btn">
-            <i class="bi bi-trash-fill"></i>
-        </button>
-    </div>
-    <script src="./main.js"></script>
+        <script src="./main.js"></script>
 </body>
 </html>
