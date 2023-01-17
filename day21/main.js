@@ -16,7 +16,7 @@ const iconsData = [{
                     },
                     {
                         "x": 1,
-                        "y": 1,
+                        "y": 0,
                         "text": "Home",
                         "url": "https://149366088.v2.pressablecdn.com/wp-content/uploads/2019/01/brown-folder-icon-png.png",
                     },

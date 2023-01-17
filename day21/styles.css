@@ -7,7 +7,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  --size-box: 180px;
+  --size-box: 150px;
   --color-shadow: rgba(255, 255, 255, 0.5);
   --color-hover:  rgba(119, 167, 255, 0.5);
 }
@@ -62,7 +62,7 @@ body {
 }
 
 .icon span {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
 }
 
