@@ -3,6 +3,9 @@ const canvas = document.getElementById('canvas')
 const context = canvas.getContext('2d')
 const undo = document.getElementById('undo')
 const clear = document.getElementById('clear')
+const sizeInput = document.getElementById('sizeInput')
+const colorsContainer = document.getElementById('colors')
+const inputColor = document.getElementById('color-input')
 // Draw Properties
 let prevX;
 let prevY;
@@ -57,6 +60,8 @@ const tools = [{
         'id': 'square-stroke',
 }]
 
+const colors = ['#ffffff','#000000','#fe0114','#0050d3','#10b03b','#fe7828']
+
 function removeActive(){
     const buttons = document.querySelectorAll('.option')
     buttons.forEach(btn => btn.classList.remove('active'))
@@ -85,6 +90,22 @@ function createTool(){
     options.append(fragmentTools)
 }
 
+function createColors (){
+    const fragmentColors = document.createDocumentFragment()
+    colors.forEach(color => {
+        const colorBtn = document.createElement('button')
+        // colorBtn.style.backgroundColor(color)
+        colorBtn.classList.add('btn', 'color')
+        colorBtn.style.backgroundColor = color
+        fragmentColors.append(colorBtn)
+        colorBtn.addEventListener('click', () => {
+            inputColor.value = color
+            selectColor = color
+        })
+    })
+    colorsContainer.append(fragmentColors)
+}
+
 const pushSnapshot = () => {
     isDrawing = false
     snapshot.push(context.getImageData(0, 0, canvas.width, canvas.height))
@@ -101,6 +122,7 @@ window.addEventListener('load', () => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
     createTool()
+    createColors()
     clearCanvas()
 })
 
@@ -188,7 +210,13 @@ function drawing (e) {
     }
 }
 
+function changeStrokeWidth(e){
+    widthStoke = e.target.value
+}
 
+function changeColor(e){
+    selectColor = e.target.value
+}
 
 canvas.addEventListener('mousedown', startDrawing)
 canvas.addEventListener('mousemove', drawing)
@@ -196,3 +224,5 @@ canvas.addEventListener('mouseup', endDrawing)
 canvas.addEventListener('mouseout', endDrawing)
 undo.addEventListener('click', undoAction)
 clear.addEventListener('click', clearCanvas)
+sizeInput.addEventListener('input', changeStrokeWidth)
+inputColor.addEventListener('change', changeColor)
