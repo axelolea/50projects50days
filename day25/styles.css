@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  --max-height-navbar: 80px;
+  --min-height-navbar: 50px;
+  --blur-size: 4px;
+  --duration-transition: 200ms;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Sriracha', cursive;
+}
+
+.navbar {
+  z-index: 20;
+  position: fixed;
+  width: 100vw;
+  height: var(--max-height-navbar);
+  background-color: black;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  transition: all var(--duration-transition) ease-out;
+}
+
+.navbar .isotype {
+  width: 50px;
+  height: 50px;
+}
+
+.isotype-a {
+  visibility: hidden;
+}
+
+.navbar ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar ul li {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.navbar.sticky {
+  height: var(--min-height-navbar);
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(var(--blur-size));
+  backdrop-filter: blur(var(--blur-size));
+}
+
+.navbar.sticky .isotype {
+  width: 35px;
+  height: 35px;
+}
+
+.main-section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  color: white;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  margin-top: var(--max-height-navbar);
+  height: calc(100vh - var(--max-height-navbar));
+  justify-content: center;
+  background-image: url('https://i.pinimg.com/originals/85/29/94/852994f8cc8d6ca7b67ddd84e975a2f8.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  flex-direction: column;
+  padding: 150px;
+}
+
+
+.content-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.block-section {
+  width: 70%;
+}
