@@ -41,10 +41,6 @@ body {
   height: 50px;
 }
 
-.isotype-a {
-  visibility: hidden;
-}
-
 .navbar ul {
   position: relative;
   display: flex;

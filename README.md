@@ -31,3 +31,8 @@ Aqui estaran todos los projectos que ire realizando en este repositorio.
 | 18 | [ Background Slider ]( https://github.com/axelolea/50projects50days/tree/main/day18 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day18/ ) |
 | 19 | [ Theme Clock ]( https://github.com/axelolea/50projects50days/tree/main/day19 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day19/ ) |
 | 20 | [ Button Ripple Effect ]( https://github.com/axelolea/50projects50days/tree/main/day20 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day20/ ) |
+| 21 | [ Drag N Drop ]( https://github.com/axelolea/50projects50days/tree/main/day21 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day21/ ) |
+| 22 | [ Drawing App ]( https://github.com/axelolea/50projects50days/tree/main/day22 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day22/ ) |
+| 23 | [ Kinetic Loader ]( https://github.com/axelolea/50projects50days/tree/main/day23 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day23/ ) |
+| 24 | [ Content Placeholder ]( https://github.com/axelolea/50projects50days/tree/main/day24 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day24/ ) |
+| 25 | [ Sticky Navbar ]( https://github.com/axelolea/50projects50days/tree/main/day25 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day25/ ) |

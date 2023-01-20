@@ -119,6 +119,36 @@
                 "number": 20,
                 "folder-name": "day20/",
                 "photo": "https://live.staticflickr.com/65535/52628587314_0dfccc6b92_k.jpg"
+            },
+            {
+                "name": "Drag N Drop",
+                "number": 21,
+                "folder-name": "day21/",
+                "photo": ""
+            },
+            {
+                "name": "Drawing App",
+                "number": 22,
+                "folder-name": "day22/",
+                "photo": ""
+            },
+            {
+                "name": "Kinetic Loader",
+                "number": 23,
+                "folder-name": "day23/",
+                "photo": ""
+            },
+            {
+                "name": "Content Placeholder",
+                "number": 24,
+                "folder-name": "day24/",
+                "photo": ""
+            },
+            {
+                "name": "Sticky Navbar",
+                "number": 25,
+                "folder-name": "day25/",
+                "photo": ""
             }
         ],
     "links": {
