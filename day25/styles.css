@@ -72,7 +72,7 @@ body {
   position: relative;
   display: flex;
   width: 100%;
-  color: white;
+  color: black;
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   margin-top: var(--max-height-navbar);
   height: calc(100vh - var(--max-height-navbar));
