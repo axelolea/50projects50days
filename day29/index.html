@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/isotype-gray.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap" rel="stylesheet">
+    <title>Double Click Heart</title>
+</head>
+<body>
+    <a href="javascript:window.history.back();">
+        <img src="../assets/isotype-white.svg" alt="isotype" class="isotype">
+    </a>
+    <div class="post-container">
+        <div class="header">
+            <div class="user-info">
+                <img src="https://t3.ftcdn.net/jpg/03/58/90/78/360_F_358907879_Vdu96gF4XVhjCZxN2kCG0THTsSQi8IhT.jpg" alt="Image Profile" class="profile-image">
+                <div class="profile">
+                    <div class="user">username</div>
+                    <div class="from">mexico, city</div>
+                </div>
+            </div>
+            <div class="triple-dot">
+                <i class="bi bi-three-dots-vertical"></i>
+            </div>
+        </div>
+        <div class="image" id="image">
+            <img src="https://picsum.photos/300" alt="Random Img">
+        </div>
+        <div class="content">
+            <div class="buttons">
+                <div class="left-buttons">
+                    <div class="heart">
+                        <i class="bi bi-heart" id="like"></i>
+                    </div>
+                    <div class="comment">
+                        <i class="bi bi-chat"></i>
+                    </div>
+                    <div class="send">
+                        <i class="bi bi-send"></i>
+                    </div>
+                </div>
+                <div class="save">
+                    <i class="bi bi-bookmark"></i>
+                </div>
+            </div>
+            <div class="likes">
+                <p>❤</p>
+                <p id="count-likes"></p>
+                <p>Likes</p>
+            </div>
+            <div class="comment">
+                <p>
+                    <strong>username</strong>
+                    comment
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
