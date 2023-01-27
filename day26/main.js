@@ -8,31 +8,31 @@ const segmentsContent = [
     {
         "background": "https://blog.depositphotos.com/wp-content/uploads/2017/07/Soothing-nature-backgrounds-2.jpg",
         "title": "Generic Text 1",
-        "text": "",
+        "text": "Soothing nature",
         "color": "#736454",
     },
     {
         "background": "http://store-images.s-microsoft.com/image/apps.26620.13682773009232620.62a18cea-40b3-43f1-811b-46ef9d15331b.96a2c700-d04f-4128-b94c-596de2c4cc83",
         "title": "Generic Text 2",
-        "text": "",
+        "text": "Soothing nature 2",
         "color": "#7d8079",
     },
     {
         "background": "https://coolwallpapers.me/th700/5217218-road-tree-perspective-road-trip-forest-woodland-leaf-leaves-mist-fog-outdoors-nature-question-dark-foggy-nobody-silence-path-unknown-wallpaper-png-images.jpg",
         "title": "Generic Text 3",
-        "text": "",
+        "text": "Road tree perspective",
         "color": "#3c3c38",
     },
     {
         "background": "https://img.freepik.com/free-photo/beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.jpg?w=2000",
         "title": "Generic Text 4",
-        "text": "",
+        "text": "Beautiful view greenery",
         "color": "#cea372",
     },
     {
         "background": "https://c4.wallpaperflare.com/wallpaper/48/545/106/nature-background-pictures-hd-1920x1200-wallpaper-preview.jpg",
         "title": "Generic Text 5",
-        "text": "",
+        "text": "Blue Lagoon",
         "color": "#399096",
     },
 ]
@@ -52,7 +52,7 @@ const createSegments = () => {
         leftSeg.style.backgroundColor = seg.color
         leftSeg.innerHTML = `
             <h1>${seg.title}</h1>
-            <p>${seg.title}</p>
+            <p>${seg.text}</p>
         `
         slideLeft.append(leftSeg)
     })
