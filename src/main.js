@@ -1,14 +1,13 @@
 const projectSection = document.getElementById("projects-section");
 
-const data = fetch("./src/days-info.json")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    createCardsProjects(data);
-  });
+async function getData()
+{
+  const resp = await fetch("./src/days-info.json")
+  return await resp.json()  
+}
 
-async function createCardsProjects(data) {
+async function createCardsProjects() {
+  const data = await getData()
   const links = data["links"];
   projects = "";
   data["projects"].forEach((project) => {
@@ -43,3 +42,5 @@ function cardStructure(project, links) {
   `;
   return card;
 }
+
+createCardsProjects()

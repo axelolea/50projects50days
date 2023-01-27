@@ -21,7 +21,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
 }
 
 a {
@@ -55,6 +54,12 @@ nav {
   z-index: 30;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
   background-color: var(--navbar-color);
+  transition: all 500ms ease-out;
+}
+
+nav.hidden
+{
+  top: -70px;
 }
 
 nav .container {

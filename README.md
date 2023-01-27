@@ -43,3 +43,8 @@ Aqui estaran todos los projectos que ire realizando en este repositorio.
 | 23 | [ Kinetic Loader ]( https://github.com/axelolea/50projects50days/tree/main/day23 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day23/ ) |
 | 24 | [ Content Placeholder ]( https://github.com/axelolea/50projects50days/tree/main/day24 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day24/ ) |
 | 25 | [ Sticky Navbar ]( https://github.com/axelolea/50projects50days/tree/main/day25 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day25/ ) |
+| 26 | [ Double Vertical Slider ]( https://github.com/axelolea/50projects50days/tree/main/day26 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day26/ ) |
+| 27 | [ Toast Notification ]( https://github.com/axelolea/50projects50days/tree/main/day27 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day27/ ) |
+| 28 | [ Github Profiles ]( https://github.com/axelolea/50projects50days/tree/main/day28 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day28/ ) |
+| 29 | [ Double Click Heart ]( https://github.com/axelolea/50projects50days/tree/main/day29 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day29/ ) |
+| 30 | [ Auto Text Effect ]( https://github.com/axelolea/50projects50days/tree/main/day30 ) | [ Demo ]( https://axelolea.github.io/50projects50days/day30/ ) |
