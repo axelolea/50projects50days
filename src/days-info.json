@@ -150,6 +150,40 @@
                 "folder-name": "day25/",
                 "photo": "https://live.staticflickr.com/65535/52638792061_e61ff6c5b0_k.jpg"
             }
+            
+            
+            
+            ,
+            {
+                "name": "Double Vertical Slider",
+                "number": 26,
+                "folder-name": "day26/",
+                "photo": ""
+            },
+            {
+                "name": "Toast Notification",
+                "number": 27,
+                "folder-name": "day27/",
+                "photo": ""
+            },
+            {
+                "name": "Github Profiles",
+                "number": 28,
+                "folder-name": "day28/",
+                "photo": ""
+            },
+            {
+                "name": "Double Click Heart",
+                "number": 29,
+                "folder-name": "day29/",
+                "photo": ""
+            },
+            {
+                "name": "Auto Text Effect",
+                "number": 30,
+                "folder-name": "day30/",
+                "photo": ""
+            }
         ],
     "links": {
         "general-demo-link" : "https://axelolea.github.io/50projects50days/",
