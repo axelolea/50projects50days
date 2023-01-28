@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'Encode Sans', sans-serif;
+  background: linear-gradient(45deg, #accae3, #e5ebb5, #accae3);
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+.password
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  min-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  gap: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.password h1
+{
+  color: #4c5f66;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.show-password
+{
+  background-color: rgba(76, 95, 102, 0.2);
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+
+.show-password input
+{
+  border: none;
+  background: transparent;
+  cursor: default;
+  font-size: 15px;
+  outline: none;
+}
+
+.btn
+{
+  background: none;
+  border: 2px solid #4c5f66;
+  color: #4c5f66;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 200ms ease-out;
+}
+
+.btn:hover
+{
+  background-color: #4c5f66;
+  color: white;
+}
+
+.settings
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  gap: 15px;
+}
+
+.settings div
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.settings div div
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
+
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #4c5f66;
+}
+
+label:hover{
+  background-color: rgba(76, 95, 102, 0.2);
+}

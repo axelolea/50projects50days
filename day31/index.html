@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/isotype-gray.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <a href="javascript:window.history.back();">
+        <img src="../assets/isotype-gray.svg" alt="isotype" class="isotype">
+    </a>
+    <div class="container">
+        <div class="password">
+            <h1>
+                Password Generator
+            </h1>
+            <div class="show-password">
+                <input
+                    type="text"
+                    id="output-password"
+                    placeholder="Generate your password"
+                    readonly>
+                <button id="copy" class="btn">
+                    <i class="bi bi-clipboard"></i>
+                </button>
+                <button id="save" class="btn">
+                    <i class="bi bi-save2"></i>
+                </button>
+            </div>
+            <div class="settings">
+                <div>
+                    <label for="length-slide">Password Length</label>
+                    <div>
+                        <input
+                            type="range"
+                            id="length-slide"
+                            min="5"
+                            max="20"
+                            value="20"
+                            placeholder="Create Password"
+                        >
+                        <span id="length-print"></span>
+                    </div>
+                </div>
+                <h2>
+                    Include
+                </h2>
+                <div>
+                    <label for="uppercase">Uppercase letters</label>
+                    <input type="checkbox" id="uppercase" checked>
+                </div>
+                <div>
+                    <label for="lowercase">Lowercase Letters</label>
+                    <input type="checkbox" id="lowercase" checked>
+                </div>
+                <div>
+                    <label for="numbers">Numbers</label>
+                    <input type="checkbox" id="numbers" checked>
+                </div>
+                <div>
+                    <label for="symbols">Symbols</label>
+                    <input type="checkbox" id="symbols" checked>
+                </div>
+            </div>
+            <button id="generate" class="btn">
+                Generate Passsword
+            </button>
+        </div>
+        <div class="save">
+
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@ Aqui estaran todos los projectos que ire realizando en este repositorio.
 
 [Original Repository 50projects50days](https://github.com/bradtraversy/50projects50days)
 
-[My 50projects50days Website](https://axelolea.github.io/50projects50days/main/)
+[My 50projects50days Website](https://axelolea.github.io/50projects50days)
 
 | Day | Name Project | Demo |
 | - | - | - |
