@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.isotype {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+
+.container,
+.switch .label,
+.switch
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container
+{
+  width: 300px;
+  gap: 10px;
+}
+
+.container h1
+{
+  font-size: 15px;
+}
+
+.switch
+{
+  position: relative;
+  width: 125px;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.switch .hidden-input
+{
+  display: none;
+  visibility: hidden;
+}
+
+.switch .label
+
+{
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ccc;
+  transition: all 200ms ease-out;
+}
+
+.switch .label .circle
+{
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #eee;
+  border-radius: 50%;
+  transition: all 200ms ease-out;
+}
+
+.hidden-input:checked + .label
+{
+  background-color: rgb(61, 142, 218);
+}
+
+.hidden-input:checked + .label .circle
+{
+  transform: translateX(30px);
+}
