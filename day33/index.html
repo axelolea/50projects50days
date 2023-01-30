@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/isotype-gray.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&display=swap" rel="stylesheet">
+    <title>Note App</title>
+</head>
+<body>
+    <nav>
+        <a href="javascript:window.history.back();">
+            <img src="../assets/isotype-white.svg" alt="isotype" class="isotype">
+        </a>
+        <button id="create" class="btn">
+            Create note
+        </button>
+    </nav>
+    <div class="notes-container" id="notes-container">
+    </div>
+    <dialog id="dialog" class="dialog">
+        <form method="dialog">
+            <p>Enter your note:</p>
+            <textarea name="note" id="note" maxlength="50" required></textarea>
+            <div class="menu">
+                <button id="save-note" type="submit">Save</button>
+                <button id="delete-note" type="reset">Delete</button>
+                <button id="cancel-note" >Cancel</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="./main.js"></script>
+</body>
+</html>

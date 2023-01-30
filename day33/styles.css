@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  --size-note: 100px;
+  user-select: none;
+}
+
+body
+{
+  font-family: 'Itim', cursive;
+}
+
+body,
+.note
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav
+{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 40px;
+  background-color: blue;
+  z-index: 10;
+}
+
+nav button
+{
+  font-size: 10px;
+}
+
+.isotype {
+  width: 30px;
+  height: 30px;
+}
+
+.notes-container
+{
+  position: relative;
+  display: grid;
+  margin: 70px 0;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  width: 95%;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+.btn
+{
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.note
+{
+  /* grid: 1; */
+  position: relative;
+  font-family: 'Lobster', cursive;
+  /* width: var(--size-note); */
+  width: 100%;
+  padding: 10px;
+  height: var(--size-note);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fdff9c;
+  transition: all 200ms ease-out;
+}
+
+.note:hover
+{
+  transform: rotate(5deg) scale(1.1);
+}
+
+.note button
+{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.note button + button
+{
+  position: absolute;
+  top: 5px;
+  left: 25px;
+}
+
+/* Modal Properties */
+
+.dialog
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 10px;
+}
+
+.dialog form textarea
+{
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.dialog form
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dialog::backdrop
+{
+  background-color: black;
+  opacity: 0.3;
+}
